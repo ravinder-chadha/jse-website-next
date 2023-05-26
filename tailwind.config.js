@@ -19,12 +19,39 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        serif: ['Brygada 1918', 'serif'],
+        serif: ['"Brygada 1918"', 'serif'],
       },
       maxWidth: {
         '8xl': '90rem',
         '9xl': '105rem',
         '10xl': '120rem',
+      },
+      colors: {
+        jse: {
+          primary: {
+            100: '#fae0e0',
+            200: '#f4c0c0',
+            300: '#e88181',
+            400: '#dc4242',
+            500: '#d62222',
+            600: '#d00202',
+          },
+          neutral: {
+            0: '#ffffff',
+            100: '#f0f0f0',
+            200: '#e0e1e1',
+            300: '#c1c3c3',
+            400: '#828787',
+            500: '#434b4b',
+            900: '#040f0f',
+          },
+          semantic: {
+            info: '#6554c0',
+            warning: '#ffab00',
+            success: '#36b37e',
+            error: '#ef233c',
+          },
+        },
       },
       zIndex: {
         1: 1,
