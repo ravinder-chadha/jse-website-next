@@ -1,9 +1,10 @@
 import React from 'react'
+import HeadingTitle from './common/HeadingTitle'
 
 const About = () => {
   return (
     <>
-      <section className='max-w-7xl mx-auto grid grid-cols-2 gap-10 my-20'>
+      <section className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 my-20 px-4'>
         <img
           src='https://cdn.tailkit.com/media/placeholders/photo-C6T6vr1sQI0-1200x900.jpg'
           alt='Hero Image'
@@ -12,10 +13,7 @@ const About = () => {
         <div className='space-y-10 lg:pr-10'>
           {/* Heading */}
           <div className='max-w-2xl'>
-            <h2 className='font-serif text-3xl md:text-4xl font-bold mb-4'>
-              What is Jolly Soothing Era?
-              <span className='block w-40 mt-2 rounded-full h-1 bg-jse-primary-500' />
-            </h2>
+            <HeadingTitle title='What is Jolly Soothing Era?' />
             <img src='/logo-black.png' className='h-40' alt='' />
             <h3 className='md:leading-relaxed text-jse-neutral-900/80'>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
@@ -29,10 +27,7 @@ const About = () => {
           </div>
         </div>
         <div>
-          <h2 className='font-serif text-3xl md:text-4xl font-bold mb-4'>
-            Our Mission
-            <span className='block w-40 mt-2 rounded-full h-1 bg-jse-primary-500' />
-          </h2>
+          <HeadingTitle title='Our Mission' h3 />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
             totam, quaerat excepturi perspiciatis illo at sit, officiis atque
@@ -40,10 +35,8 @@ const About = () => {
           </p>
         </div>
         <div>
-          <h2 className='font-serif text-3xl md:text-4xl font-bold mb-4'>
-            Our Vision
-            <span className='block w-40 mt-2 rounded-full h-1 bg-jse-primary-500' />
-          </h2>
+          <HeadingTitle title='Our Vision' h3 />
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
             totam, quaerat excepturi perspiciatis illo at sit, officiis atque

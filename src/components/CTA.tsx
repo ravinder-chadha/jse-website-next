@@ -2,7 +2,7 @@ export default function CTA() {
   return (
     <>
       {/* CTA Section: Featured Image Alternate */}
-      <div className='bg-jse-primary-100 max-w-6xl mx-auto overflow-hidden my-20 rounded-xl'>
+      <div className='bg-jse-primary-100 max-w-6xl mx-6 md:mx-auto overflow-hidden my-20 rounded-xl'>
         <div className='container xl:max-w-7xl mx-auto'>
           <div className='flex flex-col md:flex-row md:items-center space-y-16 md:space-y-0 md:space-x-10'>
             {/* Image */}
