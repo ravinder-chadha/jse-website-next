@@ -27,6 +27,8 @@ module.exports = {
         '10xl': '120rem',
       },
       colors: {
+        transparent: 'transparent',
+        'white-15': 'rgba(255, 255, 255, 0.15)',
         jse: {
           primary: {
             100: '#fae0e0',
