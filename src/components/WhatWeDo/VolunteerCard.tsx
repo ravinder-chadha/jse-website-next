@@ -1,17 +1,22 @@
 import Link from "next/link";
 import React from "react";
 
-const VolunteerCard = () => {
+interface Props {
+  bgImgLink: string;
+  heading: string;
+}
+
+const VolunteerCard = ({bgImgLink, heading}:Props) => {
   return (
       <div className="relative flex flex-col w-96 h-40 rounded-lg shadow-sm border border-gray-200 m-2">
         <img
-          src="https://source.unsplash.com/random/?volunteer"
+          src={bgImgLink}
           alt="volunteer-card"
           className="w-full h-full object-cover object-center rounded-lg"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-jse-primary-500 to-transparent opacity-75 rounded-lg"></div>
         <h3 className="absolute flex items-center justify-center h-full text-2xl w-1/2 p-5 font-bold text-white z-1">
-          Helping The Poor
+          {heading}
         </h3>
         <div className="absolute flex items-end z-1 h-full w-1/3">
           <div className="h-10 flex flex-row items-center bg-jse-neutral-900 w-full rounded-lg justify-around transition-opacity duration-300 hover:opacity-75">

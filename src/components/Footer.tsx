@@ -1,23 +1,11 @@
+import MaskImage from "./common/MaskImage";
+
 export default function Footer() {
   return (
     <>
-    {/* custom mask for the footer image */}
-    <style jsx>{`
-      .base-image {
-        margin-top: 40px;
-        background-image: linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
-        mask-image: linear-gradient(0deg, white, white, white, transparent);
-        -webkit-mask-image: linear-gradient(0deg,transparent);
-        background-color: #cccccc;
-        height: 400px;
-        background-position: 0% 28%;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }`
-      }</style>
       {/* Footer */}
     <div>
-    <img src="/lib/images/Temple_above_footer.png" className="base-image w-full" alt="" />
+    <MaskImage source="/lib/images/Temple_above_footer.png" className="w-full" height="600px" />
     <div id="footer" className="">
       {/* Signup For Newsletter Section Of Footer */}
     <div className="bg-jse-neutral-900 w-full flex flex-row">

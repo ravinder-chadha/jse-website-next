@@ -11,19 +11,25 @@ export default function WhatWeDo() {
           {/* Scrolling Cards */}
           <div className="flex flex-col">
             <div className="flex flex-row overflow-hidden ">
-              {[...Array(10)].map((_, index) => (
+              {[...Array(2)].map((_, index) => (
                 <div className="inline-flex animate-marquee" key={index}>
-                  <VolunteerCard />
+                  <VolunteerCard bgImgLink="/lib/images/elderly_care.jpg" heading="Elderly Care"/>
+                  <VolunteerCard bgImgLink="/lib/images/free_edu.jpg" heading="Free Education"/>
+                  <VolunteerCard bgImgLink="/lib/images/foodrs10.jpg" heading="Food @ Rs.10"/>
+                  <VolunteerCard bgImgLink="/lib/images/freelegalaid.jpg" heading="Free Legal Aid"/>
                 </div>
               ))}
             </div>
             <div className="flex flex-row-reverse overflow-hidden ">
-              {[...Array(10)].map((_, index) => (
+              {[...Array(2)].map((_, index) => (
                 <div
                   className="inline-flex animate-marquee-reverse"
                   key={index}
                 >
-                  <VolunteerCard />
+                  <VolunteerCard bgImgLink="/lib/images/medical_help.jpg" heading="Medical Help"/>
+                  <VolunteerCard bgImgLink="/lib/images/meditation.jpg" heading="MindWellness"/>
+                  <VolunteerCard bgImgLink="/lib/images/plant_trees.jpg" heading="Planting Trees"/>
+                  <VolunteerCard bgImgLink="/lib/images/save_cows.jpg" heading="Saving Cows"/>
                 </div>
               ))}
             </div>

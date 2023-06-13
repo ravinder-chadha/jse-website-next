@@ -17,7 +17,7 @@ const SundayArticles = () => {
             />
           </svg>
         </div>
-        <img className="rounded-2xl" src="https://source.unsplash.com/random/?nature&orientation=landscape" alt="SomeNatureImage" />
+        <img src="https://source.unsplash.com/random/?nature&orientation=landscape" alt="SomeNatureImage" className="rounded-2xl h-64 w-full object-cover" />
       </Link>
       
       <div className="flex flex-col justify-center items-center w-full mx-16">

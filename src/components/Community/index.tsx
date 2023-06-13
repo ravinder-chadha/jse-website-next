@@ -12,7 +12,7 @@ export default function Community() {
       <>
         <div className="w-full my-10 flex flex-col justify-center bg-jse-neutral-500">
           <div className="relative">
-          <img src="https://source.unsplash.com/random/?community&orientation=landscape" className="relative h-96 w-full object-cover"></img>
+          <img src="/lib/images/plantation1.jpg" className="relative h-96 w-full object-cover"></img>
           <div className="absolute inset-0 bg-gradient-to-t from-jse-neutral-500 to-transparent opacity-100"></div>
           </div>
           <div className="container mx-auto px-16 py-4">

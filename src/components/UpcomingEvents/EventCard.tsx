@@ -1,7 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
 
-const EventCard = () => {
+interface Props {
+  imglink: string
+  heading: string
+  date : string
+}
+
+const EventCard = ( {imglink, heading, date}: Props ) => {
   return (
     <div className='flex flex-col items-center bg-white rounded-lg ring-1 ring-jse-neutral-300 overflow-hidden shadow-sm'>
       <Link href='#' className='block relative group'>
@@ -19,14 +25,14 @@ const EventCard = () => {
           </svg>
         </div>
         <img
-          src='https://cdn.tailkit.com/media/placeholders/photo-73F4pKoUkM0-800x600.jpg'
+          src={imglink} className='w-full h-64 object-cover'
           alt='Featured Image of blog post'
         />
       </Link>
       <div className='p-5 lg:p-6'>
         <div className='mb-3'>
           <div className='flex items-center justify-between w-full text-gray-600 text-sm font-medium mb-3'>
-            <p className='font-bold text-jse-primary-600'>March 3, 2021</p>
+            <p className='font-bold text-jse-primary-600'>{date}</p>
             <p>Jalandhar City</p>
           </div>
         </div>
@@ -34,8 +40,7 @@ const EventCard = () => {
           <Link
             href='#'
             className='leading-7 text-gray-800 hover:text-gray-600 line-clamp-2'>
-            The 10 best hiking trails in the world you should put in your bucket
-            list
+            {heading}
           </Link>
         </h4>
 

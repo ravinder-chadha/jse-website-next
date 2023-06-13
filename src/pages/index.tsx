@@ -7,9 +7,12 @@ import YoutubeVideos from '@/components/YoutubeVideos'
 import DonateForLife from '@/components/DonateForLife'
 import WhatWeDo from '@/components/WhatWeDo'
 import Community from '@/components/Community'
+import Header from '@/components/Header'
+import MaskImage from '@/components/common/MaskImage'
 export default function Home() {
   return (
     <main className='grid'>
+      <Header />
       <Hero />
       <CTA />
       <About />
