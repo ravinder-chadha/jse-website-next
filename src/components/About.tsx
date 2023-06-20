@@ -17,7 +17,7 @@ const About = () => {
             <HeadingTitle title="What is Jolly Soothing Era?" />
             <img src="/logo-black.png" className="h-40" alt="" />
             <h3 className="md:leading-relaxed text-jse-neutral-900/80">
-              Welcome to Jolly's Soothing Era, a place of boundless compassion
+              Welcome to Jolly&apos;s Soothing Era, a place of boundless compassion
               and transformative impact. Inspired by the incredible life and
               philanthropy of Jolly Jhanji Ji, who left behind a remarkable
               legacy of assisting the underprivileged, we are dedicated to
