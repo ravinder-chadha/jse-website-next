@@ -8,9 +8,9 @@ export default function CTA() {
             {/* Image */}
             <div className='relative'>
               <img
-                src='https://cdn.tailkit.com/media/placeholders/photo-C6T6vr1sQI0-1200x900.jpg'
+                src='/lib/images/Temple_above_footer.png'
                 alt='Hero Image'
-                className='relative mx-auto shadow-lg w-full md:w-[600px]'
+                className='relative mx-auto shadow-lg h-72 w-full md:w-[600px] object-cover object-center'
               />
             </div>
             {/* END Image */}
@@ -21,9 +21,7 @@ export default function CTA() {
                   Build for a Cause, Support Temple Construction
                 </h2>
                 <h3 className='md:leading-relaxed text-jse-neutral-900/80'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Corrupti fuga dicta vero in illo rerum asperiores saepe a
-                  incidunt. Esse.
+                Support the construction of our Hindu temple and foster spiritual unity. Donate now to be a part of this sacred endeavor.
                 </h3>
               </div>
               {/* END Heading */}

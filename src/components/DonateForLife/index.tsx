@@ -14,11 +14,12 @@ export default function DonateForLife() {
                   Our main goal
                 </div>
                 <h2 className='font-serif text-3xl md:text-4xl font-extrabold mb-4'>
-                  Donate for Life : Save a Life, Donate Blood, Donate Now
+                  Donate for Life : Save a Life, Donate Blood, Plant Trees, Donate Now
                 </h2>
                 <h3 className=' md:leading-relaxed md:text-lg text-gray-600'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                  at velit maximus, molestie est a, tempor magna.
+                  Your donation will help someone to live a better life. Donate
+                  now and help us to save a life.
+                  We are committed to help the needy people. We organize various events like blood donation camps, plantation drives, vaccination camps, etc.
                 </h3>
               </div>
             </div>
@@ -31,12 +32,12 @@ export default function DonateForLife() {
 
               <div className='relative flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0'>
                 <div className='md:w-1/2 md:mt-24 space-y-6'>
-                  <ImageCard />
-                  <ImageCard />
+                  <ImageCard imglink='/lib/images/BloodCamp1.avif' mainTitle='Vaccination Camp' imgDesc='Free vaccination for all.'/>
+                  <ImageCard imglink='/lib/images/BloodCamp2.avif' mainTitle='Blood Donation Camp' imgDesc='Donate blood, save a life.'/>
                 </div>
                 <div className='md:w-1/2 space-y-6'>
-                  <ImageCard />
-                  <ImageCard />
+                  <ImageCard imglink='/lib/images/Plantation.avif' mainTitle='Plantation Drive' imgDesc='Planting 1 lakh trees.'/>
+                  <ImageCard imglink='/lib/images/Plantation2.avif' mainTitle='JSE Youth Club' imgDesc='Youth Club for social work.'/>
                 </div>
               </div>
             </div>

@@ -1,21 +1,27 @@
 import React from 'react'
 
-const ImageCard = () => {
+interface Props {
+  imglink: string
+  mainTitle: string
+  imgDesc: string
+}
+
+const ImageCard = ({imglink, mainTitle, imgDesc} : Props) => {
   return (
     <div
       className='relative group rounded-lg bg-blue-900 overflow-hidden'
       tabIndex={0}>
       <img
-        className='transform transition duration-300 ease-out group-hover:scale-125 group-hover:rotate-6'
-        src='https://cdn.tailkit.com/media/placeholders/photo-73F4pKoUkM0-800x600.jpg'
+        className='transform h-48 w-full overflow-clip object-cover transition duration-300 ease-out group-hover:scale-125 group-hover:rotate-6'
+        src={imglink}
         alt='Image 1'
       />
       {/* Item Overlay */}
       <div className='absolute inset-0 flex flex-col items-center justify-center bg-jse-primary-600 bg-opacity-80 transition duration-300 ease-out opacity-0 group-hover:opacity-100'>
         <div className='text-center'>
-          <h4 className='font-semibold text-lg text-white'>Main Title</h4>
+          <h4 className='font-semibold text-lg text-white'>{mainTitle}</h4>
           <h5 className='font-medium text-white text-opacity-80 mb-5'>
-            Image Description
+            {imgDesc}
           </h5>
         </div>
       </div>
