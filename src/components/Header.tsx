@@ -1,7 +1,11 @@
 import Link from 'next/link';
 import React, { useEffect } from 'react';
 
-const Header: React.FC = () => {
+type HeaderProps = {
+  headerTransition?: boolean;
+};
+
+const Header = ({headerTransition}:HeaderProps) => {
   useEffect(() => {
     const handleScroll = () => {
       const header = document.getElementById('page-header');
@@ -9,7 +13,7 @@ const Header: React.FC = () => {
       const viewHeight = window.innerHeight || document.documentElement.clientHeight;
       const transitionThreshold = 0.9 * viewHeight; // Threshold for the transition effect
 
-      if (header) {
+      if (header && headerTransition) {
         if (scrollPosition >= transitionThreshold) {
           const opacity = (scrollPosition - transitionThreshold) / (viewHeight - transitionThreshold);
           header.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
@@ -18,6 +22,9 @@ const Header: React.FC = () => {
           header.style.backgroundColor = 'transparent';
           header.style.transition = 'background-color 0.05s ease-in-out'; // Adjust the duration and easing as desired
         }
+      }
+      else{
+        header!.style.backgroundColor = `rgba(255, 255, 255, 1)`; 
       }
     };
 

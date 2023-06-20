@@ -8,7 +8,7 @@ import FlagBearer from "@/components/common/FlagBearer";
 
 const AboutUs = () => {
   return (
-    <MainLayout>
+    <MainLayout headerTransition={false}>
       <>
         <div className="space-y-16 container xl:max-w-7xl mx-auto px-4 lg:px-8 my-10 flex flex-col justify-center">
           <HeadingTitle

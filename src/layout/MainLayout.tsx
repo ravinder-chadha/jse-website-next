@@ -4,12 +4,13 @@ import Footer from "@/components/Footer";
 
 type MainLayoutProps = {
   children: ReactNode;
+  headerTransition: boolean;
 };
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ children, headerTransition }) => {
   return (
     <>
-      <Header />
+      <Header headerTransition={headerTransition} />
       <main>{children}</main>
       <Footer />
     </>
