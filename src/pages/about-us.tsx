@@ -156,7 +156,7 @@ const AboutUs = () => {
               />
             </div>
             <div className="grid gap-4 p-4 grid-cols-2 grid-rows-2 mx-auto">
-              <FlagBearer name="Ravinder " title="Chairman" />
+              <FlagBearer name="Harsh Jhanji " title="Chairman" />
               <FlagBearer name="Harsh Jhanji" title="Chairman" />
               <FlagBearer name="Harsh Jhanji" title="Chairman" />
               <FlagBearer name="Harsh Jhanji" title="Chairman" />

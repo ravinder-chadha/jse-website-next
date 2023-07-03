@@ -17,7 +17,7 @@ const FlagBearer = ({name, title, src, className, textSize}: Props) => {
     <div className="relative h-full w-full">
       <img
         src="/lib/images/chairman.jpg"
-        alt="Hero Image"
+        alt="Cha Image"
         className="relative rounded-xl relative object-cover h-full w-full"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50 rounded-lg"></div>

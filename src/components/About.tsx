@@ -7,9 +7,9 @@ const About = () => {
     <>
       <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 my-20 px-4">
         <img
-          src="https://cdn.tailkit.com/media/placeholders/photo-C6T6vr1sQI0-1200x900.jpg"
+          src="/lib/images/Temp_Image.avif"
           alt="Hero Image"
-          className="rounded-xl relative mx-auto"
+          className="rounded-xl relative mx-auto h-[564px] w-full"
         />
         <div className="space-y-10 lg:pr-10">
           {/* Heading */}

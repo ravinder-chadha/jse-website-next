@@ -3,8 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 type MainLayoutProps = {
-  children: ReactNode;
-  headerTransition: boolean;
+  children?: ReactNode;
+  headerTransition?: boolean;
 };
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children, headerTransition }) => {

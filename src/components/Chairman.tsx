@@ -37,7 +37,7 @@ const About = () => {
         </div>
         <img
           src="/lib/images/chairman.jpg"
-          alt="Hero Image"
+          alt="Chairman Image"
           className="rounded-xl relative mx-auto object-cover my-auto"
         />
       </section>

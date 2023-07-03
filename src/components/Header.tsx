@@ -6,6 +6,9 @@ type HeaderProps = {
 };
 
 const Header = ({headerTransition}:HeaderProps) => {
+  if(headerTransition === undefined){
+    headerTransition = true;
+  }
   useEffect(() => {
     const handleScroll = () => {
       const header = document.getElementById('page-header');
