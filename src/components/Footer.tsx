@@ -1,23 +1,11 @@
+import MaskImage from "./common/MaskImage";
+
 export default function Footer() {
   return (
     <>
-    {/* custom mask for the footer image */}
-    <style jsx>{`
-      .base-image {
-        margin-top: 40px;
-        background-image: linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
-        mask-image: linear-gradient(0deg, white, white, white, transparent);
-        -webkit-mask-image: linear-gradient(0deg,transparent);
-        background-color: #cccccc;
-        height: 400px;
-        background-position: 0% 28%;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }`
-      }</style>
       {/* Footer */}
     <div>
-    <img src="/lib/images/Temple_above_footer.png" className="base-image w-full" alt="" />
+    <MaskImage source="/lib/images/Temple_above_footer.png" className="w-full" height="400px" />
     <div id="footer" className="">
       {/* Signup For Newsletter Section Of Footer */}
     <div className="bg-jse-neutral-900 w-full flex flex-row">
@@ -45,13 +33,13 @@ export default function Footer() {
       <div className="flex flex-row gap-24">
         <div>
           <div className="font-bold text-white text-[16px]">Delhi</div>
-          <div className="text-jse-neutral-400 pt-4 pb-4 text-[16px]">White Rock, British Columbia, Canada (By Appointment Only)</div>
-          <div className="font-bold text-white text-[13px]">+91 87654789030</div>
+          <div className="text-jse-neutral-400 pt-4 pb-4 text-[16px]">114 East Moti Bagh, Sarai Rohila</div>
+          <div className="font-bold text-white text-[13px]">+91 0181 500 4127</div>
         </div>
         <div>
           <div className="font-bold text-white text-[16px]">Jalandhar</div>
-          <div className="text-jse-neutral-400 pt-4 pb-4">4th Floor, Shakti Tower, Grand trunk road, above vishal mega mart, near BMC chowk, Jalandhar, Punjab 144001</div>
-          <div className="font-bold text-white text-[13px]">+91 87654789030</div>
+          <div className="text-jse-neutral-400 pt-4 pb-4">223, New Laxmipura, Div no.3, Jalandhar, Punjab, India, 144004</div>
+          <div className="font-bold text-white text-[13px]">+91 921 622 0510</div>
         </div>
       </div>
       </div>
@@ -64,7 +52,12 @@ export default function Footer() {
         <p>Tax Exemption</p>
         <p>Jobs</p>
       </div>
-      <div className="flex flex-row w-3/5 justify-end pr-8 text-[13px]">
+      <div className="flex flex-row w-1/5 justify-end px-2 gap-4 text-[20px]">
+      <i className="fab fa-facebook text-[#3b5998]"></i>
+      <i className="fab fa-instagram text-[#e4405f]"></i>
+      <i className="fab fa-twitter text-[#1da1f2]"></i>
+      </div>
+      <div className="flex flex-row w-2/5 justify-end pr-8 text-[13px]">
         <p>Copyright 2022-2023 - All Rights Reserved</p>
       </div>
     </div>

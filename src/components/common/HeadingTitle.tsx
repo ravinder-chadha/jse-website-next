@@ -19,7 +19,7 @@ const HeadingTitle = ({ title, h3, className, subtitle }: HeadingTitleProps) => 
           className ? className : ''
         )}>
         {title}
-        <span className={classNames('block w-40 mt-2 rounded-full h-0.5 bg-jse-primary-500', className && className == 'mx-auto' ? className : '')} />
+        <span className={classNames('block w-40 mt-2 rounded-full h-0.5 bg-jse-primary-500', className ? className : '')} />
       </h2>
     )
   }
@@ -27,12 +27,12 @@ const HeadingTitle = ({ title, h3, className, subtitle }: HeadingTitleProps) => 
     return (
       <h2
         className={classNames(
-          'font-serif text-3xl md:text-4xl font-semibold mb-4',
-          className ? className : ''
+          'font-serif text-3xl md:text-4xl mb-4',
+          className ? className : 'font-semibold'
         )}>
         {title}
-        <p className="text-base text-jse-neutral-300 pt-2">{subtitle}</p>
-        <span className={classNames('block w-40 mt-2 rounded-full h-0.5 bg-jse-primary-500', className && className == 'mx-auto' ? className : '')} />
+        <p className={classNames("text-base text-jse-neutral-300 pt-2 font-normal", className ? className : '')}>{subtitle}</p>
+        <span className={classNames('block w-40 mt-2 rounded-full h-0.5 bg-jse-primary-500', className ? className : '')} />
       </h2>
     )
   }
@@ -44,7 +44,7 @@ const HeadingTitle = ({ title, h3, className, subtitle }: HeadingTitleProps) => 
           className ? className : ''
         )}>
         {title}
-        <span className={classNames('block w-40 mt-2 rounded-full h-0.5 bg-jse-primary-500', className && className == 'mx-auto' ? className : '')} />
+        <span className={classNames('block w-40 mt-2 rounded-full h-0.5 bg-jse-primary-500', className ? className : '')} />
       </h3>
     )
   }
@@ -52,12 +52,12 @@ const HeadingTitle = ({ title, h3, className, subtitle }: HeadingTitleProps) => 
     return (
       <h3
         className={classNames(
-          'font-serif text-2xl md:text-3xl font-semibold mb-4',
-          className ? className : ''
+          'font-serif text-2xl md:text-3xl mb-4',
+          className ? className : 'font-semibold'
         )}>
         {title}
-        <p className="text-md text-jse-neutral-300 pt-2">{subtitle}</p>
-        <span className={classNames('block w-40 mt-2 rounded-full h-0.5 bg-jse-primary-500', className && className == 'mx-auto' ? className : '')} />
+        <p className={classNames("text-md text-jse-neutral-300 pt-2 font-normal", className ? className : '')}>{subtitle}</p>
+        <span className={classNames('block w-40 mt-2 rounded-full h-0.5 bg-jse-primary-500', className ? className : '')} />
       </h3>
     )
   }

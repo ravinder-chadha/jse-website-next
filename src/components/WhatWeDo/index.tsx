@@ -1,5 +1,6 @@
 import HeadingTitle from "../common/HeadingTitle";
 import VolunteerCard from "./VolunteerCard";
+import Marquee from "react-fast-marquee";
 
 export default function WhatWeDo() {
   return (
@@ -10,23 +11,18 @@ export default function WhatWeDo() {
           <HeadingTitle title="What we do..." className="mx-auto" />
           {/* Scrolling Cards */}
           <div className="flex flex-col">
-            <div className="flex flex-row overflow-hidden ">
-              {[...Array(10)].map((_, index) => (
-                <div className="inline-flex animate-marquee" key={index}>
-                  <VolunteerCard />
-                </div>
-              ))}
-            </div>
-            <div className="flex flex-row-reverse overflow-hidden ">
-              {[...Array(10)].map((_, index) => (
-                <div
-                  className="inline-flex animate-marquee-reverse"
-                  key={index}
-                >
-                  <VolunteerCard />
-                </div>
-              ))}
-            </div>
+              <Marquee>
+              <VolunteerCard bgImgLink="/lib/images/elderly_care.avif" heading="Elderly Care"/>
+              <VolunteerCard bgImgLink="/lib/images/free_edu.avif" heading="Free Education"/>
+              <VolunteerCard bgImgLink="/lib/images/foodrs10.avif" heading="Food @ Rs.10"/>
+              <VolunteerCard bgImgLink="/lib/images/freelegalaid.avif" heading="Free Legal Aid"/>
+              </Marquee>
+            <Marquee direction="right">
+                  <VolunteerCard bgImgLink="/lib/images/medical_help.avif" heading="Medical Help"/>
+                  <VolunteerCard bgImgLink="/lib/images/meditation.avif" heading="MindWellness"/>
+                  <VolunteerCard bgImgLink="/lib/images/plant_trees.avif" heading="Planting Trees"/>
+                  <VolunteerCard bgImgLink="/lib/images/save_cows.avif" heading="Saving Cows"/>
+            </Marquee>
           </div>
           {/* END Of Scrolling Cards */}
           {/* Explore All button */}
