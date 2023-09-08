@@ -8,9 +8,9 @@ interface Props {
 
 const SundayArticles = ({ imglink, heading, articleText }: Props) => {
   return (
-    <div className="flex flex-row w-full">
-      <Link href="#" className="block relative group w-4/5 my-8 rounded-2xl">
-        <div className="flex items-center rounded-2xl justify-center absolute inset-0 bg-jse-primary-400 bg-opacity-75 opacity-0 transition ease-out duration-150 group-hover:opacity-100">
+    <div className="flex flex-row w-full items-start justify-start gap-4 md:my-8 my-6">
+      <Link href="#" className="block relative group w-4/5  rounded-2xl">
+        <div className="flex items-start  rounded-2xl justify-start  absolute inset-0 bg-jse-primary-400 bg-opacity-75 opacity-0 transition ease-out duration-150 group-hover:opacity-100">
           <svg
             fill="currentColor"
             viewBox="0 0 20 20"
@@ -27,11 +27,11 @@ const SundayArticles = ({ imglink, heading, articleText }: Props) => {
         <img
           src={imglink}
           alt="SomeNatureImage"
-          className="rounded-2xl h-64 w-full object-cover"
+          className="rounded-2xl md:h-64 h-full w-full object-cover "
         />
       </Link>
 
-      <div className="flex flex-col justify-center items-start w-full mx-16">
+      <div className="flex flex-col justify-start items-start w-full md:mx-16">
         <Link
           href="#"
           className="text-2xl font-bold text-neutral-300 hover:text-white transition ease-out duration-150"

@@ -2,21 +2,21 @@ export default function CTA() {
   return (
     <>
       {/* CTA Section: Featured Image Alternate */}
-      <div className='bg-jse-primary-100 max-w-6xl mx-6 md:mx-auto overflow-hidden my-20 rounded-xl'>
+      <div className='bg-jse-primary-100 max-w-6xl mx-6  md:mx-auto overflow-hidden my-20 rounded-xl'>
         <div className='container xl:max-w-7xl mx-auto'>
-          <div className='flex flex-col md:flex-row md:items-center space-y-16 md:space-y-0 md:space-x-10'>
+          <div className='flex flex-col md:flex-row  md:items-center space-y-5 md:space-y-0 md:space-x-10'>
             {/* Image */}
             <div className='relative'>
               <img
                 src='/lib/images/Temple_above_footer.png'
                 alt='Hero Image'
-                className='relative mx-auto shadow-lg h-72 w-full md:w-[600px] object-cover object-center'
+                className='relative mx-auto md:shadow-lg   shadow-none md:h-72 h-64 w-full md:w-[600px] object-cover object-center'
               />
             </div>
             {/* END Image */}
-            <div className='space-y-10 lg:pr-10'>
+            <div className='space-y-10 lg:pr-10 '>
               {/* Heading */}
-              <div className='max-w-2xl'>
+              <div className='max-w-2xl md:p-0 pl-5 pr-2 '>
                 <h2 className='font-serif text-3xl md:text-4xl font-bold text-jse-primary-500 mb-4'>
                   Build for a Cause, Support Temple Construction
                 </h2>

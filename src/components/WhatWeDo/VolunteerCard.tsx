@@ -10,7 +10,7 @@ interface Props {
 const VolunteerCard = ({bgImgLink, heading, subheading}:Props) => {
   if(!subheading){
   return (
-      <div className="relative flex flex-col w-96 h-40 rounded-lg shadow-sm border border-gray-200 m-2">
+      <div className="relative flex flex-col w-full h-40 rounded-lg shadow-sm border border-gray-200 m-2">
         <img
           src={bgImgLink}
           alt="volunteer-card"

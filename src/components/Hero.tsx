@@ -1,11 +1,10 @@
 import Link from "next/link";
 import MaskImage from "./common/MaskImage";
-
 export default function Hero() {
   return (
     <>
       {/* Hero Section: Image Cover With Header Actions Dark */}
-        <MaskImage source="/hero.jpg" className="relative bg-cover bg-top w-full" />
+        <MaskImage source="/hero.jpg" className="relative bg-cover bg-top w-full"  />
         <div className='absolute inset-0 w-full h-full bg-gradient-to-t from-jse-primary-500/90 to-transparent'>
 
           {/* Hero Content */}

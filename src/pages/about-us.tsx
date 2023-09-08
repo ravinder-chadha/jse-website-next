@@ -17,7 +17,7 @@ const AboutUs = () => {
             className="mx-auto text-center font-black"
           />
           <div className="flex flex-col">
-            <div className="mx-32 flex flex-row justify-center">
+            <div className="md:mx-32 mx-4 flex flex-row justify-center">
               <svg
                 width="23"
                 height="20"
@@ -30,7 +30,7 @@ const AboutUs = () => {
                   fill="#D62222"
                 />
               </svg>
-              <h3 className="font-serif text-xl w-3/4 text-center py-4">
+              <h3 className="font-serif md:text-xl text-lg md:w-3/4 w-full text-center py-4">
                 Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
                 faucibus tempus pellentesque fermentum.
               </h3>
@@ -59,7 +59,7 @@ const AboutUs = () => {
           className="relative h-96 w-full object-cover"
         ></img>
         <div className="relative container xl:max-w-7xl mx-auto my-10 flex flex-col justify-center">
-          <HeadingTitle title="Our Story" className="mx-auto" />
+          <HeadingTitle title="Our Story" className="mx-auto" />  
           <svg
             className="w-full"
             width="25"
@@ -125,7 +125,7 @@ const AboutUs = () => {
               strokeWidth="4"
             />
           </svg>
-          <div className="absolute w-1/2 flex flex-col items-end px-6 mt-32">
+          <div className="absolute w-1/2 flex flex-col items-end  px-6 mt-32">
             <OurStory />
             <div className="py-2 w-2/3 mt-12 h-36 text-right">8 Sep, 2020</div>
             <OurStory />
@@ -147,8 +147,8 @@ const AboutUs = () => {
             <VissonMission />
           </section>
           <HeadingTitle title="The flag bearers" className="mx-auto" />
-          <div className="grid grid-cols-2">
-            <div className="py-4 pl-4">
+          <div className="grid md:grid-cols-2 grid-cols-1">
+            <div className="py-4 md:pl-4 md:px-0 px-4">
               <FlagBearer
                 name="Harsh Jhanji"
                 title="Chairman"
