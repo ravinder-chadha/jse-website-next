@@ -43,7 +43,7 @@ Ultrices nisi lacus quisque nibh lectus nam at. Amet iaculis tellus sagittis tor
                   />
                 </svg>
               </div>
-              <h3 className="font-serif text-[28px] leading-tight w-3/4 text-left p-6 font-semibold">
+              <h3 className="font-serif md:text-3xl text-2xl leading-tight w-3/4 text-left md:p-6 px-2 py-6 font-semibold">
                 Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
                 faucibus tempus pellentesque fermentum.
               </h3>
@@ -69,7 +69,7 @@ Ultrices nisi lacus quisque nibh lectus nam at. Amet iaculis tellus sagittis tor
             </div>
           </div>
           <HeadingTitle title="All attempts" className="font-black" />
-          <div className="grid grid-cols-2 gap-10">
+          <div className="grid grid-cols-2 md:gap-10 gap-5">
             <VolunteerCard
               bgImgLink="/lib/images/elderly_care.avif"
               heading="Elderly Care"
