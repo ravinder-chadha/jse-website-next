@@ -70,9 +70,7 @@ const AboutUs = () => {
 
             {/* Timeline */}
             <div className="flex flex-col relative gap-4 pl-10 md:pl-12 lg:pl-0">
-              {/* Event */}
               <Story direction="left" />
-              {/* END Event */}
               <Story direction="right" />
               <Story direction="left" />
               <Story direction="right" />
@@ -80,10 +78,7 @@ const AboutUs = () => {
             {/* END Timeline */}
           </div>
 
-
-
-
-
+        {/* previous timeline */}
           {/* <svg
             className="w-full"
             width="25"
