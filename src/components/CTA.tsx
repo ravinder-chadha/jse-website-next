@@ -1,3 +1,4 @@
+import Image from "next/image"
 export default function CTA() {
   return (
     <>
@@ -7,11 +8,7 @@ export default function CTA() {
           <div className='flex flex-col md:flex-row  md:items-center space-y-5 md:space-y-0 md:space-x-10'>
             {/* Image */}
             <div className='relative'>
-              <img
-                src='/lib/images/Temple_above_footer.png'
-                alt='Hero Image'
-                className='relative mx-auto md:shadow-lg   shadow-none md:h-72 h-64 w-full md:w-[600px] object-cover object-center'
-              />
+              <Image src='/lib/images/Temple_above_footer.png' alt='Hero Image' className='relative mx-auto md:shadow-lg   shadow-none md:h-72 h-64 w-full md:w-[600px] object-cover object-center' width={600} height={600}></Image>
             </div>
             {/* END Image */}
             <div className='space-y-10 lg:pr-10 '>

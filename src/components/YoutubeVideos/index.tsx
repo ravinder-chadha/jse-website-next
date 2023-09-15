@@ -18,7 +18,7 @@ export default function YoutubeVideos() {
               title='Latest from Youtube'
             />
             <div className='h-full grid grid-cols-1 md:grid-cols-2 gap-10'>
-              <div>
+              <div className='hidden md:block'>
                 <iframe
                   width='100%'
                   height='100%'
@@ -29,7 +29,7 @@ export default function YoutubeVideos() {
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                   allowFullScreen></iframe>
               </div>
-              <div>
+              <div className='hidden md:block'>
                 <iframe
                   width='100%'
                   height='100%'

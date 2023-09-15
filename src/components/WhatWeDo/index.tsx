@@ -4,10 +4,11 @@ import Marquee from "react-fast-marquee";
 
 export default function WhatWeDo() {
   return (
-    <div className="container md:px-10 px-4 my-8 md:my-10">
+    <>
       {/* What We Do Section */}
-      <div className="space-y-4 md:space-y-16">
-        <HeadingTitle title="What we do..." className="md:text-center" />
+      <div className="space-y-4 md:space-y-16 container xl:max-w-7xl mx-auto px-4 lg:px-8 my-10 flex flex-col justify-center">
+        {/*  */}
+        <HeadingTitle title="What we do..." className="mx-auto text-center" />
         {/* Scrolling Cards */}
         <div className="flex flex-col">
           <Marquee>
@@ -58,6 +59,6 @@ export default function WhatWeDo() {
         </div>
       </div>
       {/* END What We Do Section */}
-    </div>
+    </>
   );
 }

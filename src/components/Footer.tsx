@@ -1,4 +1,5 @@
 import MaskImage from "./common/MaskImage";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -26,7 +27,7 @@ export default function Footer() {
           {/* Contact Us Section Of Footer */}
           <div className="bg-jse-neutral-900 flex md:flex-row flex-col">
             <div className="md:block hidden basis-1/2 p-8">
-              <img src="/lib/images/JSE_logo.png" className="w-1/3" alt="" />
+              <Image src="/lib/images/JSE_logo.png" className="w-1/3" alt="" width={100} height={100} />
             </div>
             <div className="basis-1/2 py-8 px-4">
               <div className="uppercase font-bold text-jse-neutral-400 pb-4 text-[13px]">Contact Us</div>

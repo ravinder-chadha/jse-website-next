@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import MainLayout from "@/layout/MainLayout";
 import CTA from "@/components/CTA";
 import HeadingTitle from "@/components/common/HeadingTitle";
@@ -54,10 +55,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <img
-          src="/lib/images/plantation1.avif"
-          className="relative h-96 w-full object-cover"
-        ></img>
+        <Image src="/lib/images/plantation1.avif" className="relative h-96 w-full object-cover" width={1920} height={1080} alt="plantation" />
         <div className="relative container xl:max-w-7xl mx-auto my-10 flex flex-col items-center justify-center">
           <HeadingTitle title="Our Story" className="mx-auto" />
 

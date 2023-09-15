@@ -1,22 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
-type Props = {
+interface Props {
   Title?: string;
   SubTitle?: string;
   Description?: string;
   ImageSrc?: string;
 };
 
-const Attempt = ({ Title, SubTitle, Description, ImageSrc }: Props) => {
+const Attempt = ({ Title, SubTitle, Description, ImageSrc = "" }: Props) => {
   return (
     <div>
       <div className="relative h-96 w-full">
-        <img
-          src={ImageSrc}
-          alt="Attemp Image"
-          className="relative rounded-xl object-cover h-full w-full"
-        />
+        <Image src={ImageSrc} alt="Attemp Image" className="rounded-xl object-cover h-full w-full" width={100} height={100}></Image>
         <div className="absolute inset-0 bg-gradient-to-r from-jse-primary-500 via-jse-primary-400 to-transparent opacity-75 rounded-lg"></div>
         <div className="absolute inset-0 flex flex-row justify-between items-center w-full h-full px-4">
           <svg

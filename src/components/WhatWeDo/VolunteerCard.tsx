@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
 interface Props {
@@ -11,11 +12,7 @@ const VolunteerCard = ({bgImgLink, heading, subheading}:Props) => {
   if(!subheading){
   return (
       <div className="relative flex flex-col w-full h-40 rounded-lg shadow-sm border border-gray-200 m-2">
-        <img
-          src={bgImgLink}
-          alt="volunteer-card"
-          className="w-full h-full object-cover object-center rounded-lg"
-        />
+        <Image src={bgImgLink} alt="volunteer-card" className="w-full h-full object-cover object-center rounded-lg" width={100} height={100}></Image>
         <div className="absolute inset-0 bg-gradient-to-r from-jse-primary-500 to-transparent opacity-75 rounded-lg"></div>
         <h3 className="absolute flex items-center justify-center h-full text-2xl w-1/2 p-5 font-bold text-white z-1">
           {heading}
@@ -51,11 +48,7 @@ const VolunteerCard = ({bgImgLink, heading, subheading}:Props) => {
     return(
       <div className="flex flex-col">
         <div className="flex flex-col h-52 rounded-lg shadow-sm border border-gray-200">
-          <img
-            src={bgImgLink}
-            alt="volunteer-card"
-            className="w-full h-full object-cover object-center rounded-lg"
-          />
+          <Image src={bgImgLink} alt="volunteer-card" className="w-full h-full object-cover object-center rounded-lg" width={100} height={100}></Image>
         </div>
         <h3 className="md:text-2xl text-xl md:my-2 mt-1 font-bold">
         {heading}

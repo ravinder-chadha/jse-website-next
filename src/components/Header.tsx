@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 type HeaderProps = {
@@ -42,7 +43,7 @@ const Header = ({headerTransition}:HeaderProps) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [headerTransition]);
 
   return (
     <div className="sticky top-0 bg-gradient-to-b from-white to-transparent z-100">
@@ -50,11 +51,7 @@ const Header = ({headerTransition}:HeaderProps) => {
       <div className='flex  text-center flex-row items-center justify-between  md:space-y-0 container xl:max-w-7xl mx-auto px-4'>
       <div>
         <Link href='/' className='hover:opacity-75'>
-          <img
-            className='h-20'
-            src='/logo-black.png'
-            alt='Company logo'
-          />
+          <Image src="/logo-black.png" alt="logo" className='h-20' width={120} height={120}></Image>
         </Link>
       </div>
 

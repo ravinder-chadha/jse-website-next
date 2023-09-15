@@ -30,6 +30,7 @@
 
 
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 interface HeadingTitleProps {
   source: string;
@@ -62,15 +63,13 @@ const MaskImage = ({ source, className }: HeadingTitleProps) => {
     };
   }, []);
 
-  return (
-    <img
-      className={classNames('base-image', className ? className : '')}
-      style={{
-        backgroundImage: `url(${source}),
-          linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4))`,
-        height: height, // Use the dynamically updated height state
-      }}
-    />
+  return (  
+    <Image className={classNames('base-image', className ? className : '')}
+    style={{
+      backgroundImage: `url(${source}),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4))`,
+      height: height, // Use the dynamically updated height state
+    }} alt="" width={100} height={100} src={source}></Image>
   );
 };
 

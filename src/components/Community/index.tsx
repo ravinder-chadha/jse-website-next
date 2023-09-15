@@ -12,7 +12,7 @@ export default function Community() {
       <div className="my-6 md:my-10">
         <div className="w-full bg-jse-neutral-500">
           <div className="relative">
-            <img src="/lib/images/plantation1.avif" className="h-64 md:h-96 w-full object-cover" alt="Community Banner"></img>
+            <Image src="/lib/images/plantation1.avif" className="h-64 md:h-96 w-full object-cover" width={1920} height={1080} alt="Community Banner" />
             <div className="absolute inset-0 bg-gradient-to-t from-jse-neutral-500 to-transparent opacity-100"></div>
           </div>
           <div className="container mx-auto px-4 md:px-16 py-4">
