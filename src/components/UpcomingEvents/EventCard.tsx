@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import React from 'react'
 
 interface Props {
@@ -8,7 +9,7 @@ interface Props {
   desc : string
 }
 
-const EventCard = ( {imglink, heading, date, desc}: Props ) => {
+const EventCard = ( {imglink = "", heading, date, desc}: Props ) => {
   return (
     <div className='w-full flex flex-col items-center bg-white rounded-lg ring-1 ring-jse-neutral-300 overflow-hidden shadow-sm'>
       <Link href='#' className='block relative group w-full'>
@@ -25,10 +26,7 @@ const EventCard = ( {imglink, heading, date, desc}: Props ) => {
             />
           </svg>
         </div>
-        <img
-          src={imglink} className='w-full h-64 object-fill'
-          alt='Featured Image of blog post'
-        />
+        <Image src={imglink} alt='Featured Image of blog post' className='w-full h-64 object-fill' width={100} height={100}></Image>
       </Link>
       <div className='p-5 lg:p-6'>
         <div className='mb-3'>

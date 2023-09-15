@@ -24,7 +24,7 @@ Ultrices nisi lacus quisque nibh lectus nam at. Amet iaculis tellus sagittis tor
             title="Prominent Contributors"
             className="mx-auto text-center font-black"
           />
-          <div className="grid grid-cols-4 gap-10">
+          <div className="grid md:grid-cols-4 grid-cols-2 md:gap-10 gap-5">
               <FlagBearer name="Harsh Jhanji " title="Chairman" />
               <FlagBearer name="Harsh Jhanji" title="Chairman" />
               <FlagBearer name="Harsh Jhanji" title="Chairman" />
@@ -35,7 +35,7 @@ Ultrices nisi lacus quisque nibh lectus nam at. Amet iaculis tellus sagittis tor
             className="mx-auto text-center font-black"
           />
           <HeadingTitle title="Other attempts" className="font-black" />
-          <div className="grid grid-cols-2 gap-10">
+          <div className="grid grid-cols-2 md:gap-10 gap-5">
             <VolunteerCard
               bgImgLink="/lib/images/elderly_care.avif"
               heading="Elderly Care"

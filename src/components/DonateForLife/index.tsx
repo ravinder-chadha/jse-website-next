@@ -5,7 +5,7 @@ export default function DonateForLife() {
     <>
       {/* Features Section: Vertical Cards */}
       <div className='bg-white overflow-hidden'>
-        <div className='container xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-32'>
+        <div className='container xl:max-w-7xl mx-auto px-4 md:py-16 py-0 lg:px-8 lg:py-32'>
           <div className='flex flex-col lg:flex-row lg:items-center space-y-12 lg:space-y-0 lg:space-x-20'>
             {/* Heading */}
             <div className='lg:w-5/12 xl:w-5/12 md:py-12 space-y-10'>

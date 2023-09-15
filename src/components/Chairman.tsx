@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import HeadingTitle from "./common/HeadingTitle";
 import SubSectionHeader from "./common/SubSectionHeader";
 
@@ -35,11 +36,7 @@ const About = () => {
             </h3>
           </div>
         </div>
-        <img
-          src="/lib/images/chairman.jpg"
-          alt="Chairman Image"
-          className="rounded-xl relative mx-auto object-cover my-auto"
-        />
+        <Image src="/lib/images/chairman.jpg" alt="Chairman Image" className="rounded-xl relative mx-auto object-cover my-auto" width={564} height={564}></Image>
       </section>
     </>
   );

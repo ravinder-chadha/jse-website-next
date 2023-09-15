@@ -13,7 +13,7 @@ const Podcast = () => {
 
   return (
     <div
-      className={`bg-jse-neutral-900 w-fit rounded-2xl p-4 flex flex-row justify-around items-center cursor-pointer my-8 mx-2 ${
+      className={`bg-jse-neutral-900 w-fit rounded-2xl p-4 flex flex-row justify-around items-center cursor-pointer md:my-8 my-4 mx-2 ${
         isHovered ? 'bg-jse-primary-500' : ''
       }`}
       onMouseEnter={handleHover}

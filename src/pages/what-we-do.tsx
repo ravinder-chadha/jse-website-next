@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import MainLayout from "@/layout/MainLayout";
 import CTA from "@/components/CTA";
 import HeadingTitle from "@/components/common/HeadingTitle";
@@ -23,11 +24,7 @@ const OurAttempts = () => {
 Ultrices nisi lacus quisque nibh lectus nam at. Amet iaculis tellus sagittis tortor arcu vel rutrum. Purus sit bibendum urna morbi mi donec diam mi nibh. Tortor aenean platea pharetra nibh felis sodales nisi arcu. Blandit felis adipiscing et elit dis dolor sed. Elementum non netus maecenas cursus proin elit non turpis. Arcu a enim odio aliquam. Commodo matt"
           />
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 my-20 px-4">
-            <img
-              src="/lib/images/Temp_Image.avif"
-              alt="Hero Image"
-              className="rounded-xl relative mx-auto h-fit"
-            />
+            <Image src="/lib/images/Temp_Image.avif" alt="Hero Image" className="rounded-xl relative mx-auto h-fit" width={564} height={564}></Image>
             <div className="flex flex-col justify-center items-center">
               <div className="flex justify-start w-3/4">
                 <svg
@@ -43,7 +40,7 @@ Ultrices nisi lacus quisque nibh lectus nam at. Amet iaculis tellus sagittis tor
                   />
                 </svg>
               </div>
-              <h3 className="font-serif text-[28px] leading-tight w-3/4 text-left p-6 font-semibold">
+              <h3 className="font-serif md:text-3xl text-2xl leading-tight w-3/4 text-left md:p-6 px-2 py-6 font-semibold">
                 Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
                 faucibus tempus pellentesque fermentum.
               </h3>
@@ -69,7 +66,7 @@ Ultrices nisi lacus quisque nibh lectus nam at. Amet iaculis tellus sagittis tor
             </div>
           </div>
           <HeadingTitle title="All attempts" className="font-black" />
-          <div className="grid grid-cols-2 gap-10">
+          <div className="grid grid-cols-2 md:gap-10 gap-5">
             <VolunteerCard
               bgImgLink="/lib/images/elderly_care.avif"
               heading="Elderly Care"

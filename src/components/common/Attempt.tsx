@@ -1,22 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
-type Props = {
+interface Props {
   Title?: string;
   SubTitle?: string;
   Description?: string;
   ImageSrc?: string;
 };
 
-const Attempt = ({ Title, SubTitle, Description, ImageSrc }: Props) => {
+const Attempt = ({ Title, SubTitle, Description, ImageSrc = "" }: Props) => {
   return (
     <div>
       <div className="relative h-96 w-full">
-        <img
-          src={ImageSrc}
-          alt="Attemp Image"
-          className="relative rounded-xl relative object-cover h-full w-full"
-        />
+        <Image src={ImageSrc} alt="Attemp Image" className="rounded-xl object-cover h-full w-full" width={100} height={100}></Image>
         <div className="absolute inset-0 bg-gradient-to-r from-jse-primary-500 via-jse-primary-400 to-transparent opacity-75 rounded-lg"></div>
         <div className="absolute inset-0 flex flex-row justify-between items-center w-full h-full px-4">
           <svg
@@ -60,7 +57,7 @@ const Attempt = ({ Title, SubTitle, Description, ImageSrc }: Props) => {
           </svg>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-10 my-5">
+      <div className="grid grid-cols-2 md:gap-10 gap-4 my-5">
         <div>
           <h3 className="font-serif text-[28px] leading-tight text-left font-semibold">
             {Title}
@@ -69,12 +66,12 @@ const Attempt = ({ Title, SubTitle, Description, ImageSrc }: Props) => {
             {SubTitle}
           </p>
           
-          <div className="w-1/4 mt-10">
+          <div className="md:w-1/4 w-4/5 md:mt-10 mt-5">
           <Link
                 href={"/single-attempts/" + Title}
-                className="flex items-center justify-center h-full text-sm text-white font-bold"
+                className="flex items-center justify-center h-full  text-sm text-white font-bold"
               >
-            <div className="h-10 flex flex-row items-center bg-jse-neutral-900 w-full rounded-lg justify-around transition-opacity duration-300 hover:opacity-75">
+            <div className="h-10 flex md:pl-0 pl-1  flex-row items-center bg-jse-neutral-900 w-full rounded-lg justify-around transition-opacity duration-300 hover:opacity-75">
                 Load More
               <svg
                 className="text-white w-3 h-3 mr-4 transform transition-transform duration-500 hover:rotate-3 hover:scale-150"
@@ -94,7 +91,7 @@ const Attempt = ({ Title, SubTitle, Description, ImageSrc }: Props) => {
             </Link>
           </div>
         </div>
-        <p>{Description}</p>
+        <p className="md:text-base text-base">{Description}</p>
       </div>
     </div>
   );

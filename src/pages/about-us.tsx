@@ -1,11 +1,12 @@
 import React from "react";
+import Image from "next/image";
 import MainLayout from "@/layout/MainLayout";
 import CTA from "@/components/CTA";
 import HeadingTitle from "@/components/common/HeadingTitle";
 import OurStory from "@/components/common/OurStory";
 import VissonMission from "@/components/common/VissonMission";
 import FlagBearer from "@/components/common/FlagBearer";
-
+import Story from "@/components/common/Story";
 const AboutUs = () => {
   return (
     <MainLayout headerTransition={false}>
@@ -17,7 +18,7 @@ const AboutUs = () => {
             className="mx-auto text-center font-black"
           />
           <div className="flex flex-col">
-            <div className="mx-32 flex flex-row justify-center">
+            <div className="md:mx-32 mx-4 flex flex-row justify-center">
               <svg
                 width="23"
                 height="20"
@@ -30,7 +31,7 @@ const AboutUs = () => {
                   fill="#D62222"
                 />
               </svg>
-              <h3 className="font-serif text-xl w-3/4 text-center py-4">
+              <h3 className="font-serif md:text-xl text-lg md:w-3/4 w-full text-center py-4">
                 Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
                 faucibus tempus pellentesque fermentum.
               </h3>
@@ -54,13 +55,29 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <img
-          src="/lib/images/plantation1.avif"
-          className="relative h-96 w-full object-cover"
-        ></img>
-        <div className="relative container xl:max-w-7xl mx-auto my-10 flex flex-col justify-center">
+        <Image src="/lib/images/plantation1.avif" className="relative h-96 w-full object-cover" width={1920} height={1080} alt="plantation" />
+        <div className="relative container xl:max-w-7xl mx-auto my-10 flex flex-col items-center justify-center">
           <HeadingTitle title="Our Story" className="mx-auto" />
-          <svg
+
+          <div className="relative w-3/5  py-5">
+            {/* Vertical Guide */}
+            <div className="w-10 md:w-12 absolute top-10 left-0 md:bottom-32 bottom-20 flex flex-col justify-center lg:left-1/2 lg:-ml-6" aria-hidden="true">
+              <div className="mx-auto w-1 grow bg-red-400" />
+            </div>
+            {/* END Vertical Guide */}
+
+            {/* Timeline */}
+            <div className="flex flex-col relative gap-4 pl-10 md:pl-12 lg:pl-0">
+              <Story direction="left" />
+              <Story direction="right" />
+              <Story direction="left" />
+              <Story direction="right" />
+            </div>
+            {/* END Timeline */}
+          </div>
+
+        {/* previous timeline */}
+          {/* <svg
             className="w-full"
             width="25"
             height="993"
@@ -125,7 +142,7 @@ const AboutUs = () => {
               strokeWidth="4"
             />
           </svg>
-          <div className="absolute w-1/2 flex flex-col items-end px-6 mt-32">
+          <div className="absolute w-1/2 flex flex-col items-end  px-6 mt-32">
             <OurStory />
             <div className="py-2 w-2/3 mt-12 h-36 text-right">8 Sep, 2020</div>
             <OurStory />
@@ -140,15 +157,18 @@ const AboutUs = () => {
             <OurStory />
             <div className="py-2 w-2/3 mt-12 h-36">8 Sep, 2020</div>
             <OurStory />
-          </div>
+           
+
+          </div> */}
         </div>
+
         <div className="container xl:max-w-7xl mx-auto my-20 flex flex-col justify-center">
           <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 my-20 px-4">
             <VissonMission />
           </section>
           <HeadingTitle title="The flag bearers" className="mx-auto" />
-          <div className="grid grid-cols-2">
-            <div className="py-4 pl-4">
+          <div className="grid md:grid-cols-2 grid-cols-1">
+            <div className="py-4 md:pl-4 md:px-0 px-4">
               <FlagBearer
                 name="Harsh Jhanji"
                 title="Chairman"

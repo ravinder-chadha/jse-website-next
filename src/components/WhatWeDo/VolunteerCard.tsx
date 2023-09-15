@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
 interface Props {
@@ -10,12 +11,8 @@ interface Props {
 const VolunteerCard = ({bgImgLink, heading, subheading}:Props) => {
   if(!subheading){
   return (
-      <div className="relative flex flex-col w-96 h-40 rounded-lg shadow-sm border border-gray-200 m-2">
-        <img
-          src={bgImgLink}
-          alt="volunteer-card"
-          className="w-full h-full object-cover object-center rounded-lg"
-        />
+      <div className="relative flex flex-col w-full h-40 rounded-lg shadow-sm border border-gray-200 m-2">
+        <Image src={bgImgLink} alt="volunteer-card" className="w-full h-full object-cover object-center rounded-lg" width={100} height={100}></Image>
         <div className="absolute inset-0 bg-gradient-to-r from-jse-primary-500 to-transparent opacity-75 rounded-lg"></div>
         <h3 className="absolute flex items-center justify-center h-full text-2xl w-1/2 p-5 font-bold text-white z-1">
           {heading}
@@ -51,21 +48,17 @@ const VolunteerCard = ({bgImgLink, heading, subheading}:Props) => {
     return(
       <div className="flex flex-col">
         <div className="flex flex-col h-52 rounded-lg shadow-sm border border-gray-200">
-          <img
-            src={bgImgLink}
-            alt="volunteer-card"
-            className="w-full h-full object-cover object-center rounded-lg"
-          />
+          <Image src={bgImgLink} alt="volunteer-card" className="w-full h-full object-cover object-center rounded-lg" width={100} height={100}></Image>
         </div>
-        <h3 className="text-2xl my-2 font-bold">
+        <h3 className="md:text-2xl text-xl md:my-2 mt-1 font-bold">
         {heading}
         </h3>
-        <p className="my-2 line-clamp-2 text-ellipsis">{subheading}</p>
-        <div className="w-1/4">
+        <p className="md:my-2 mb-2 line-clamp-2 text-ellipsis">{subheading}</p>
+        <div className="md:w-1/4 w-3/4">
           <div className="h-10 flex flex-row items-center bg-jse-neutral-900 w-full rounded-lg justify-around transition-opacity duration-300 hover:opacity-75">
             <Link
               href="#"
-              className="flex items-center justify-center h-full text-sm text-white font-bold pl-4"
+              className="flex items-center justify-center h-full  md:text-sm text-xs  text-white font-bold md:pl-4 pl-1"
             >
               Learn More
             </Link>
