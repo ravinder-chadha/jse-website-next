@@ -8,7 +8,7 @@ const About = () => {
     <>
       <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 my-20 px-4">
         <Image
-        src="/lib/images/Temp_Image.avif"
+        src="/lib/images/Founder.jpg"
         alt="Hero Image"
         className="rounded-xl relative mx-auto h-[564px] w-full"
         width={564}
