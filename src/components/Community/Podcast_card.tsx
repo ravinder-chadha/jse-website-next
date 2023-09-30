@@ -33,7 +33,7 @@ const Podcast_card = () => {
 
       <div className='w-88 rounded-lg h-88 overflow-hidden'>
         {/* not sure with the object cover property not working */}
-        <Image src="/gallery.png" alt="volunteer-card" className=" object-cover object-center rounded-lg" width={300} height={300} style={{objectFit: "cover"}}	 />
+        <Image src="/gallery.png" alt="volunteer-card" className=" object-cover object-center rounded-lg w-52 h-36" width={300} height={300} style={{objectFit: "cover"}}	 />
       </div>
 
       <div className="flex flex-row justify-between w-full items-center text-jse-neutral-300 ">
