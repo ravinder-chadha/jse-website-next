@@ -4,22 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 .base-image {
-      margin-top: 40px;
-      mask-image: linear-gradient(0deg, white, white, white, transparent);
-      -webkit-mask-image: linear-gradient(0deg,
-          white,
-          white,
-          white,
-          transparent);
-      background-color: #cccccc;
-      background-position: 0% 28%;
-      background-repeat: no-repeat;
-      background-size: cover;
+  margin-top: 40px;
+  mask-image: linear-gradient(0deg, white, white, white, transparent);
+  -webkit-mask-image: linear-gradient(0deg, white 80%, transparent);
+  background-color: #cccccc;
+  background-position: 0% 28%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-
-
- 
