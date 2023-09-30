@@ -47,8 +47,10 @@ const MaskImage = ({ source, className }: HeadingTitleProps) => {
   // Function to compute the height based on screen size
   const getHeight = () => {
     if (typeof window !== 'undefined') {
-        // web screen
-        setHeight('calc(100vh - 152px)');
+
+      // web screen
+      setHeight('calc(100vh - 152px)');
+
     }
   };
 
@@ -60,13 +62,13 @@ const MaskImage = ({ source, className }: HeadingTitleProps) => {
     };
   }, []);
 
-  return (  
-    <Image className={classNames('base-image', className ? className : '')}
-    style={{
-      backgroundImage: `url(${source}),
+  return (
+    <Image className={classNames('base-image', className ? className : '', 'object-cover')}
+      style={{
+        backgroundImage: `url(${source}),
         linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4))`,
-      height: height, // Use the dynamically updated height state
-    }} alt="" width={100} height={100} src={source}></Image>
+        height: height, // Use the dynamically updated height state
+      }} alt="" width={1000} height={1000} src={source} />
   );
 };
 
