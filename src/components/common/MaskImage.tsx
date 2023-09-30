@@ -51,7 +51,6 @@ const MaskImage = ({ source, className }: HeadingTitleProps) => {
       // web screen
       setHeight('calc(100vh - 152px)');
 
-
     }
   };
 

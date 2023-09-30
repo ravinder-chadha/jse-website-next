@@ -36,7 +36,7 @@ const About = () => {
             </h3>
           </div>
         </div>
-        <Image src="/lib/images/chairman.jpg" alt="Chairman Image" className="rounded-xl relative mx-auto object-cover my-auto" width={564} height={564}></Image>
+        <Image src="/lib/images/Chairman.jpg" alt="Chairman Image" className="rounded-xl relative mx-auto object-cover my-auto" width={564} height={564}></Image>
       </section>
     </>
   );

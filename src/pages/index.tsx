@@ -13,6 +13,7 @@ import MaskImage from "@/components/common/MaskImage";
 import Chairman from "@/components/Chairman";
 import MainLayout from "@/layout/MainLayout";
 import UnderProgressPopup from "@/components/common/UnderProgessPopup";
+import Gallery from "@/components/gallery";
 export default function Home() {
   const [showPopup, setShowPopup] = useState(true);
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <UpcomingEvents />
         <YoutubeVideos />
         <DonateForLife />
+        <Gallery/>
         <WhatWeDo />
         <Community />
       </MainLayout>

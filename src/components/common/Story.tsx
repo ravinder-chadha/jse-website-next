@@ -1,4 +1,4 @@
-export default function Story({ direction }) {
+export default function Story({ direction }:any) {
   if (direction === 'left') {
     return (
       <div className="relative lg:w-1/2 lg:pr-6 lg:mr-auto">
