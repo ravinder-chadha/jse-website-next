@@ -13,7 +13,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-const FlagBearer = ({name, title, src = "/lib/images/chairman.jpg", className, textSize}: Props) => {
+const FlagBearer = ({name, title, src = "/lib/images/Chairman.jpg", className, textSize}: Props) => {
   return (
     <div className="relative h-full w-full">
       <Image src={src} alt="Chairman Image" className="rounded-xl relative object-cover h-full w-full" width={564} height={564}></Image>

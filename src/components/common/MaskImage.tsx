@@ -47,11 +47,8 @@ const MaskImage = ({ source, className }: HeadingTitleProps) => {
   // Function to compute the height based on screen size
   const getHeight = () => {
     if (typeof window !== 'undefined') {
-
         // web screen
         setHeight('calc(100vh - 152px)');
-      
-     
     }
   };
 
