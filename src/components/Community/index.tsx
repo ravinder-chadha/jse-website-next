@@ -4,8 +4,26 @@ import Podcast from "./Podcast";
 import SubSectionHeader from "../common/SubSectionHeader";
 import SundayArticles from "./Articles";
 import articleText from "./articleText.json";
+import { getPodcastLinks } from "../../../api/api";
+import { useState,useEffect } from "react";
 
 export default function Community() {
+
+  const [podcast, setPodcast] = useState<any>(null);
+
+  useEffect(() => {
+    getPodcastLinks()
+      .then((res) => {
+        console.log("podcast--->",res)
+        setPodcast(res);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+
+    }, []);
+
+
   return (
     <>
       {/* Community Section */}
@@ -19,10 +37,10 @@ export default function Community() {
             <HeadingTitle title="Join the Soothing Community" className="text-white" subtitle="Checkout what’s on offer in our community" />
             <SubSectionHeader title="Weekly Podcasts" />
             <div className="flex flex-col justify-start md:flex-row my-4">
-              <Podcast />
-              <Podcast />
-              <Podcast />
-              <Podcast />
+              <Podcast/>
+              <Podcast/>
+              <Podcast/>
+              <Podcast/>
             </div>
             <SubSectionHeader title="Sunday Articles" />
             <div className="flex flex-col gap-4 ">

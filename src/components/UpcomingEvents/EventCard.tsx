@@ -1,15 +1,17 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
+import {PortableText} from '@portabletext/react'
 
 interface Props {
   imglink: string
   heading: string
-  date : string
-  desc : string
+  date : Date
+  desc : any,
+  location : string
 }
 
-const EventCard = ( {imglink = "", heading, date, desc}: Props ) => {
+const EventCard = ( {imglink = "", heading, date, desc,location}: Props ) => {
   return (
     <div className='w-full flex flex-col items-center bg-white rounded-lg ring-1 ring-jse-neutral-300 overflow-hidden shadow-sm'>
       <Link href='#' className='block relative group w-full'>
@@ -31,8 +33,8 @@ const EventCard = ( {imglink = "", heading, date, desc}: Props ) => {
       <div className='p-5 lg:p-6'>
         <div className='mb-3'>
           <div className='flex items-center justify-between w-full text-gray-600 text-sm font-medium mb-3'>
-            <p className='font-bold text-jse-primary-600'>{date}</p>
-            <p>Jalandhar City</p>
+            <p className='font-bold text-jse-primary-600'>{new Date(date).toDateString().slice(0, -5)}</p>
+            <p>{location}</p>
           </div>
         </div>
         <h4 className='font-bold text-lg sm:text-xl mb-2'>
@@ -42,10 +44,8 @@ const EventCard = ( {imglink = "", heading, date, desc}: Props ) => {
             {heading}
           </Link>
         </h4>
-
-        <p className='prose prose-indigo prose-sm line-clamp-4'>
-          {desc}
-        </p>
+        <PortableText value={desc} />
+        
         <button
           type='button'
           className='inline-flex w-full mt-4 justify-center items-center space-x-2 border font-semibold rounded-lg px-4 py-2 leading-6 border-jse-primary-500 bg-jse-primary-500 text-white hover:text-white hover:bg-jse-primary-400 hover:border-jse-primary-300 focus:ring focus:ring-jse-primary-300 focus:ring-opacity-50 active:bg-jse-primary-400 active:border-jse-primary-300'>
