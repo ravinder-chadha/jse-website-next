@@ -11,7 +11,6 @@ export default function YoutubeVideos() {
         }}>
         <div className='bg-gradient-to-l from-black via-black/80 to-transparent h-full grid grid-cols- md:grid-cols-3 py-10 px-10'>
           {/* Hero Content */}
-          <div></div>
           <div className='col-span-2 flex flex-col justify-stretch'>
             <HeadingTitle
               className='text-white h-fit'

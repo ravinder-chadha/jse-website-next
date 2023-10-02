@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import MainLayout from "@/layout/MainLayout";
 import CTA from "@/components/CTA";
 import HeadingTitle from "@/components/common/HeadingTitle";
-import DonateUsForm from "@/components/DonateUs/DonateUsForm";
 import WaysToDonate from "@/components/DonateUs/WaysToDonate";
+import Formikform from "@/components/DonateUs/Formikform";
 
 const Donate = () => {
   const [showForm, setShowForm] = useState(false);
@@ -75,7 +75,8 @@ const Donate = () => {
             </button>
           </div>
           <div className={showForm ? " flex flex-col gap-24" : "hidden"}>
-            <DonateUsForm />
+            {/* <DonateUsForm /> */}
+            <Formikform/>
             <WaysToDonate />
           </div>
           <HeadingTitle title="Donation Payment Gateway" className="text-center mx-auto" />
