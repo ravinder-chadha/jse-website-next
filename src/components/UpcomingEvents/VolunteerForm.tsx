@@ -28,13 +28,10 @@ const volunteerFormSchema = Yup.object().shape({
   phonecode: Yup.string(),
   phoneno: Yup.string().matches(/^[0-9]{10}$/, 'Phone Number must be 10 digits'),
 
-
   // adresss
   street: Yup.string(),
   city: Yup.string(),
   country: Yup.string(),
-
-
 });
 
 const VolunteerForm = ({ showPopup, setShowPopup }: Display) => {

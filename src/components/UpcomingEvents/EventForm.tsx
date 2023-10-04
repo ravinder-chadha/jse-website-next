@@ -11,7 +11,6 @@ interface Values {
   street: string;
   city: string;
   country: string;
-
 }
 type Display = {
   showPopup: boolean;

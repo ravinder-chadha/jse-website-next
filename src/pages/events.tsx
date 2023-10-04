@@ -26,7 +26,7 @@ const Events = () => {
   return (
     <>
       <MainLayout headerTransition={false}>
-        <div className="space-y-16 container xl:max-w-7xl mx-auto px-4 lg:px-8 my-10 flex flex-col justify-center">
+        <div className="md:space-y-16 space-y-8 container xl:max-w-7xl mx-auto px-4 lg:px-8 md:my-10 my-5 flex flex-col justify-center">
           <HeadingTitle
             title="Events"
             subtitle="Get to know the initiative better"
@@ -36,10 +36,10 @@ const Events = () => {
           {/* content */}
           <div className="grid grid-cols-2">
             {/* left side contetn */}
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col md:mr-0 mr-2  md:gap-8 gap-4">
               {/* title and date */}
-              <div className="flex flex-col gap-4">
-                <h1 className="font-serif text-3xl md:text-4xl font-semibold">  6th Mega Blood Donation and eye checkup Camp</h1>
+              <div className="flex flex-col md:gap-4 gap-2">
+                <h1 className="font-serif text-2xl md:text-4xl font-semibold">  6th Mega Blood Donation and eye checkup Camp</h1>
                 <p className="text-lg font-normal">4th oct 2023</p>
               </div>
               {/* register button */}
@@ -67,7 +67,7 @@ const Events = () => {
 
             {/* paragraph content */}
             <div className="flex flex-col justify-start">
-              <p className="text-base  mb-4">Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
+              <p className="md:text-base test-sm  mb-4">Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
                 faucibus tempus pellentesque fermentum Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
                 faucibus tempus pellentesque fermentum
                 Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
@@ -83,7 +83,7 @@ const Events = () => {
               subtitle="Helping us would encourage more people to join us"
               className="mx-auto text-center font-black"
             />
-            <div className="flex items-center mx-auto gap-16">
+            <div className="flex items-center  justify-between gap-16">
               {/* register button */}
               <button
                 onClick={setVolunteerDisplay}
@@ -103,7 +103,6 @@ const Events = () => {
           </div>
           <EventForm showPopup={showEventPopup} setShowPopup={setShowEventPopup}/>
           <VolunteerForm showPopup={showVolunteerPopup} setShowPopup={setShowVolunteerPopup}/>
-
 
 
           {/* other events  */}
