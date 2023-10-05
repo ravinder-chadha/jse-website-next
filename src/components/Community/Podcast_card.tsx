@@ -24,7 +24,7 @@ const Podcast_card = () => {
   return (
     <>
     <div
-      className={`bg-jse-neutral-900 w-56  overflow-hidden rounded-2xl p-7 flex flex-col justify-around gap-8 items-center cursor-pointer md:my-8 my-4  ${isHovered ? 'bg-jse-primary-500' : ''
+      className={`bg-jse-neutral-900 md:w-56 w-full  overflow-hidden rounded-2xl p-7 flex flex-col justify-around gap-8 items-center cursor-pointer md:my-8 my-4  ${isHovered ? 'bg-jse-primary-500' : ''
         }`}
       onMouseEnter={handleHover}
       onMouseLeave={handleMouseLeave}
@@ -33,7 +33,7 @@ const Podcast_card = () => {
 
       <div className='w-88 rounded-lg h-88 overflow-hidden'>
         {/* not sure with the object cover property not working */}
-        <Image src="/gallery.png" alt="volunteer-card" className=" object-cover object-center rounded-lg w-52 h-36" width={300} height={300} style={{objectFit: "cover"}}	 />
+        <Image src="/gallery.png" alt="volunteer-card" className=" object-cover object-center rounded-lg md:w-52 md:h-36 w-full h-full" width={300} height={300} style={{objectFit: "cover"}}	 />
       </div>
 
       <div className="flex flex-row justify-between w-full items-center text-jse-neutral-300 ">

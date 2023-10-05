@@ -14,6 +14,7 @@ import Chairman from "@/components/Chairman";
 import MainLayout from "@/layout/MainLayout";
 import UnderProgressPopup from "@/components/common/UnderProgessPopup";
 import Gallery from "@/components/gallery";
+import ChairmanMessage from "@/components/ChairmanMessage";
 export default function Home() {
   const [showPopup, setShowPopup] = useState(true);
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <CTA />
         <About />
         <Chairman />
+        <ChairmanMessage/>
         <UpcomingEvents />
         <YoutubeVideos />
         <DonateForLife />
