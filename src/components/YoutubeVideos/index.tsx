@@ -9,15 +9,16 @@ export default function YoutubeVideos() {
         style={{
           backgroundImage: 'url("/hero.jpg")',
         }}>
-        <div className='bg-gradient-to-l from-black via-black/80 to-transparent h-full grid grid-cols- md:grid-cols-3 py-10 px-10'>
+        <div className='bg-gradient-to-l from-black via-black/80 to-transparent h-full grid grid-cols-1 md:grid-cols-3 py-10 px-10'>
           {/* Hero Content */}
+          <div></div>
           <div className='col-span-2 flex flex-col justify-stretch'>
             <HeadingTitle
               className='text-white h-fit'
               title='Latest from Youtube'
             />
             <div className='h-full grid grid-cols-1 md:grid-cols-2 gap-10'>
-              <div className='hidden md:block'>
+              <div>
                 <iframe
                   width='100%'
                   height='100%'
@@ -28,7 +29,7 @@ export default function YoutubeVideos() {
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                   allowFullScreen></iframe>
               </div>
-              <div className='hidden md:block'>
+              <div>
                 <iframe
                   width='100%'
                   height='100%'

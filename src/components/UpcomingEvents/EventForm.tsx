@@ -17,7 +17,6 @@ type Display = {
   setShowPopup: React.Dispatch<React.SetStateAction<boolean>>; // Assuming you're using React state hooks
 };
 
-
 const eventFormSchema = Yup.object().shape({
   name: Yup.string(),
   email: Yup.string()
@@ -26,14 +25,10 @@ const eventFormSchema = Yup.object().shape({
   // phone
   phonecode: Yup.string(),
   phoneno: Yup.string().matches(/^[0-9]{10}$/, 'Phone Number must be 10 digits'),
-
-
   // adresss
   street: Yup.string(),
   city: Yup.string(),
   country: Yup.string(),
-
-
 });
 
 const EventForm = ({ showPopup, setShowPopup }: Display) => {
@@ -79,7 +74,7 @@ const EventForm = ({ showPopup, setShowPopup }: Display) => {
         >
           <Form className='flex flex-col items-center justify-centers gap-6'>
             <div className="flex md:flex-row flex-col md:gap-8 items-center justify-center gap-4">
-              <div className="flex flex-col md:gap-3 gap-1">
+              <div className="flex flex-col gap-3">
                 <label htmlFor="name">Name</label>
                 <Field
                   id="name"
@@ -105,11 +100,11 @@ const EventForm = ({ showPopup, setShowPopup }: Display) => {
                   <Field
                     id="phoneno"
                     name="phoneno"
+                    style={{ width: "140px" }}
                     placeholder="Doe"
                     className="border border-gray-400  rounded-lg px-3 py-2"
                   />
                 </div>
-
                 <label htmlFor="email">Email*</label>
                 <Field
                   id="email"
@@ -118,14 +113,13 @@ const EventForm = ({ showPopup, setShowPopup }: Display) => {
                   type="email"
                   className="border border-gray-400 rounded-lg px-3 py-2"
                 />
-
               </div>
-              <div className="flex flex-col md:gap-3 gap-1">
+              <div className="flex flex-col w-full gap-3">
                 <label htmlFor="street">Address</label>
                 <Field
                   id="street"
                   name="street"
-                  placeholder="street"
+                  placeholder="House, street "
                   className="border border-gray-400 rounded-lg px-3 py-2"
                 />
                 <label htmlFor="city">City</label>
@@ -142,36 +136,13 @@ const EventForm = ({ showPopup, setShowPopup }: Display) => {
                   placeholder="India"
                   className="border border-gray-400 rounded-lg px-3 py-2"
                 />
-
               </div>
             </div>
-
-
-            <div className='flex flex-col gap-2'>
-              <h2>Purpose</h2>
-              <label htmlFor="message">(reasoing question here)</label>
-              <Field
-                as="textarea"
-                id="message"
-                name="message"
-                placeholder="Message"
-                className="border border-gray-400 rounded-lg px-3 py-2"
-              />
-            </div>
-
-
             <div className='flex flex-row gap-16 items-center justify-center'>
-              <button
-                type="submit"
-                onClick={() => { }}
-                className="bg-jse-primary-500 text-white font-semibold rounded-lg py-2 px-4 hover:bg-jse-primary-400 focus:outline-none focus:ring focus:ring-jse-primary-300 focus:ring-opacity-50 active:bg-jse-primary-400"
-              >
+              <button type="submit" onClick={() => { }} className="bg-jse-primary-500 text-white font-semibold rounded-lg py-2 px-4 hover:bg-jse-primary-400 focus:outline-none focus:ring focus:ring-jse-primary-300 focus:ring-opacity-50 active:bg-jse-primary-400">
                 Submit
               </button>
-              <button
-                className=" bg-jse-primary-500 text-white font-base rounded-lg py-2 px-4 hover:bg-jse-primary-400 focus:outline-none focus:ring focus:ring-jse-primary-300 focus:ring-opacity-50 active:bg-jse-primary-400"
-                onClick={handleCloseClick} // Use the click event handler function
-              >
+              <button className=" bg-jse-primary-500 text-white font-base rounded-lg py-2 px-4 hover:bg-jse-primary-400 focus:outline-none focus:ring focus:ring-jse-primary-300 focus:ring-opacity-50 active:bg-jse-primary-400" onClick={handleCloseClick}  >
                 Close
               </button>
             </div>

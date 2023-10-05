@@ -50,7 +50,7 @@ Ultrices nisi lacus quisque nibh lectus nam at. Amet iaculis tellus sagittis tor
           </div>
 
           <HeadingTitle title="Other attempts" className="font-black" />
-          <div className="grid grid-cols-2 md:gap-10 gap-5">
+          <div className="grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
             <VolunteerCard
               bgImgLink="/lib/images/elderly_care.avif"
               heading="Elderly Care"

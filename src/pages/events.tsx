@@ -83,7 +83,7 @@ const Events = () => {
               subtitle="Helping us would encourage more people to join us"
               className="mx-auto text-center font-black"
             />
-            <div className="flex items-center  justify-between gap-16">
+            <div className="flex items-center  justify-center gap-16">
               {/* register button */}
               <button
                 onClick={setVolunteerDisplay}
@@ -95,19 +95,19 @@ const Events = () => {
                 </svg>
               </button>
 
+              {/* donate now button */}
               <Link href="/donate" className="w-fit h-fit flex items-center border text-jse-primary-500 border-jse-primary-500 hover:text-white font-semibold rounded-lg py-2 px-4 hover:bg-jse-primary-400 focus:outline-none focus:ring focus:ring-jse-primary-300 focus:ring-opacity-50 active:bg-jse-primary-400">
-                Donate Us
+                Patreon Us
               </Link>
-
             </div>
           </div>
-          <EventForm showPopup={showEventPopup} setShowPopup={setShowEventPopup}/>
-          <VolunteerForm showPopup={showVolunteerPopup} setShowPopup={setShowVolunteerPopup}/>
+          <EventForm showPopup={showEventPopup} setShowPopup={setShowEventPopup} />
+          <VolunteerForm showPopup={showVolunteerPopup} setShowPopup={setShowVolunteerPopup} />
 
 
           {/* other events  */}
-          <HeadingTitle title="past events" className="font-black" />
-          <div className="grid grid-cols-2 md:gap-10 gap-5">
+          <HeadingTitle title="Past events" className="font-black" />
+          <div className="grid  md:grid-cols-2 grid-cols-1  md:gap-10 gap-5">
             <VolunteerCard
               bgImgLink="/lib/images/elderly_care.avif"
               heading="Elderly Care"
@@ -137,6 +137,20 @@ const Events = () => {
                             faucibus tempus pellentesque fermentum"
             />
           </div>
+
+          {/* anonmyus feedback */}
+          <div className="flex flex-col gap-5">
+            <HeadingTitle title="Anonymous Feedback" subtitle="Fueling Improvement and Growth" className="font-black text-center mx-auto" />
+            <div className="mx-auto text-center">
+              <label htmlFor="feedback">Share Your Thoughts, suggestions, or ideas Anonymously</label>
+              <textarea
+                id="feedback"
+                className="border md:w-11/12 w-full mt-2 border-gray-400 rounded-lg px-3 py-2"
+                rows={4}  // You can specify the number of rows you want to display
+              ></textarea>
+            </div>
+          </div>
+
           <CTA />
         </div>
       </MainLayout>
