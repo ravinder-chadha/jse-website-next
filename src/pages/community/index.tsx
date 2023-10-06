@@ -6,7 +6,7 @@ import CTA from "@/components/CTA";
 import HeadingTitle from "@/components/common/HeadingTitle";
 import SubSectionHeader from "@/components/common/SubSectionHeader";
 import SundayArticles from "@/components/Community/Articles";
-import articleText from "../components/Community/articleText.json"
+import articleText from "../../components/Community/articleText.json"
 import Podcast_card from "@/components/Community/Podcast_card";
 import ArticlesCardFull from "@/components/Community/ArticlesCardFull";
 
@@ -43,10 +43,10 @@ const Community = () => {
               </div>
               <SubSectionHeader title="Sunday Articles" />
               <div className="grid md:grid-cols-2 grid-cols-1 my-8  md:gap-16 gap-8">
-                <ArticlesCardFull bgImgLink={articleText.article1.img} heading={articleText.article1.title} subheading={articleText.article1.content} />
-                <ArticlesCardFull bgImgLink={articleText.article1.img} heading={articleText.article1.title} subheading={articleText.article1.content} />
-                <ArticlesCardFull bgImgLink={articleText.article1.img} heading={articleText.article1.title} subheading={articleText.article1.content} />
-                <ArticlesCardFull bgImgLink={articleText.article2.img} heading={articleText.article2.title} subheading={articleText.article2.content} />
+                  <ArticlesCardFull bgImgLink={articleText.article1.img} heading={articleText.article1.title} subheading={articleText.article1.content} link="/community/article" />
+                  <ArticlesCardFull bgImgLink={articleText.article1.img} heading={articleText.article1.title} subheading={articleText.article1.content} link="/community/article" />
+                  <ArticlesCardFull bgImgLink={articleText.article1.img} heading={articleText.article1.title} subheading={articleText.article1.content} link="/community/article" />
+                  <ArticlesCardFull bgImgLink={articleText.article2.img} heading={articleText.article2.title} subheading={articleText.article2.content} link="/community/article" />
               </div>
               <div className="flex justify-center">
                 <button
