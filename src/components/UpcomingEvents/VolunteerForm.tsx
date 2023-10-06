@@ -45,7 +45,7 @@ const VolunteerForm = ({ showPopup, setShowPopup }: Display) => {
   };
   return (
     <div className="fixed inset-0 flex md:mt-0 mt-8 items-center justify-center z-100">
-      <div className="bg-white px-8 py-4 flex flex-col items-end border border-jse-natural-300 justify-center rounded shadow-xl">
+      <div className="bg-white px-8 py-4 flex flex-col items-center border border-jse-natural-300 justify-center rounded shadow-xl">
         <HeadingTitle
           title="Fill out the Volunteer form"
           subtitle="Your Support Matters. Complete the Form to Get Involved."
@@ -74,8 +74,8 @@ const VolunteerForm = ({ showPopup, setShowPopup }: Display) => {
           }}
         >
           <Form className='flex flex-col items-center justify-centers gap-10'>
-            <div className="flex md:flex-row flex-col md:gap-8 items-center justify-center gap-4">
-              <div className="flex flex-col gap-3">
+            <div className="flex md:flex-row flex-col md:gap-8 md:items-start items-center sm:gap-2">
+              <div className="flex flex-col gap-2">
                 <label htmlFor="name">Name</label>
                 <Field
                   id="name"
@@ -115,7 +115,7 @@ const VolunteerForm = ({ showPopup, setShowPopup }: Display) => {
                   className="border border-gray-400 rounded-lg px-3 py-2"
                 />
               </div>
-              <div className="flex flex-col w-full gap-3">
+              <div className="flex flex-col w-full  gap-2">
                 <label htmlFor="street">Address</label>
                 <Field
                   id="street"
