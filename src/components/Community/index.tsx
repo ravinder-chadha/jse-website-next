@@ -4,6 +4,7 @@ import Podcast from "./Podcast";
 import SubSectionHeader from "../common/SubSectionHeader";
 import SundayArticles from "./Articles";
 import articleText from "./articleText.json";
+import Link from "next/link";
 
 export default function Community() {
   return (
@@ -26,8 +27,8 @@ export default function Community() {
             </div>
             <SubSectionHeader title="Sunday Articles" />
             <div className="flex flex-col gap-4 ">
-              <SundayArticles imglink={articleText.article1.img} heading={articleText.article1.title} articleText={articleText.article1.content} />
-              <SundayArticles imglink={articleText.article2.img} heading={articleText.article2.title} articleText={articleText.article2.content} />
+              <Link href="/community/article"> <SundayArticles imglink={articleText.article1.img} heading={articleText.article1.title} articleText={articleText.article1.content} /></Link>
+              <Link href="/community/article"><SundayArticles imglink={articleText.article2.img} heading={articleText.article2.title} articleText={articleText.article2.content} /></Link>
             </div>
           </div>
         </div>
