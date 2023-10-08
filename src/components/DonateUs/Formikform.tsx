@@ -63,8 +63,8 @@ const Formikform = () => {
         }}
       >
         <Form className='flex flex-col items-center justify-centers gap-10'>
-          <div className="flex md:flex-row flex-col md:gap-8 items-center justify-center gap-4">
-            <div className="flex flex-col gap-3">
+          <div className="flex md:flex-row flex-col md:gap-8 items-center w-3/4 justify-center gap-4">
+            <div className="flex flex-col w-full gap-3">
               <label htmlFor="name">Name</label>
               <Field
                 id="name"
@@ -90,8 +90,8 @@ const Formikform = () => {
                 <Field
                   id="phoneno"
                   name="phoneno"
-                  placeholder="Doe"
-                  className="border border-gray-400 inline rounded-lg px-3 py-2"
+                  placeholder="123-456-7890"
+                  className="border w-full border-gray-400 inline rounded-lg px-3 py-2"
                 />
               </div>
 
@@ -99,17 +99,15 @@ const Formikform = () => {
               <Field
                 id="email"
                 name="email"
-                placeholder="john@acme.com"
+                placeholder="john@gmail.com"
                 type="email"
                 className="border border-gray-400 rounded-lg px-3 py-2"
               />
-              <label htmlFor="email">Purpose Of donation*</label>
+              <label htmlFor="purpose">Purpose Of donation*</label>
               <Field
-                id="email"
+                id="purpose"
                 as="select"
-                name="email"
-                placeholder="john@acme.com"
-                type="email"
+                name="purpose"
                 className="border border-gray-400 rounded-lg px-3 py-2"
               >
                 <option value="red">helping poor</option>
@@ -117,7 +115,7 @@ const Formikform = () => {
                 <option value="blue">heling to build temple</option>
               </Field>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col  w-full gap-3">
               <label htmlFor="street">Address</label>
               <Field
                 id="street"
@@ -147,7 +145,6 @@ const Formikform = () => {
                 id="dontaion"
                 as="select"
                 name="dontaion"
-                placeholder="john@acme.com"
                 className="border border-gray-400 rounded-lg px-3 py-2"
               >
                 <option value="upi">UPI</option>

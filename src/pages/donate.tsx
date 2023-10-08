@@ -76,8 +76,8 @@ const Donate = () => {
           </div>
           <div className={showForm ? " flex flex-col gap-24" : "hidden"}>
             {/* <DonateUsForm /> */}
-            <Formikform/>
             <WaysToDonate />
+            <Formikform/>
           </div>
           <HeadingTitle title="Donation Payment Gateway" className="text-center mx-auto" />
         </div>

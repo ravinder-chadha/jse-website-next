@@ -19,11 +19,18 @@ export default function Community() {
           <div className="container mx-auto px-4 md:px-16 py-4">
             <HeadingTitle title="Join the Soothing Community" className="text-white" subtitle="Checkout what’s on offer in our community" />
             <SubSectionHeader title="Weekly Podcasts" />
-            <div className="flex flex-col justify-start md:flex-row my-4">
+            <div className="flex flex-col justify-start md:flex-row mt-4">
               <Podcast />
               <Podcast />
               <Podcast />
               <Podcast />
+            </div>
+            <div className=" flex items-center justify-center mb-8">
+            <button
+              type='button'
+              className=' border font-semibold rounded-lg py-2 leading-6 px-4 hover:border-jse-primary-500 text-white hover:bg-jse-primary-500'>
+              Explore More
+            </button>
             </div>
             <SubSectionHeader title="Sunday Articles" />
             <div className="flex flex-col gap-4 ">

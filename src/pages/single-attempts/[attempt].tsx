@@ -71,7 +71,7 @@ Ultrices nisi lacus quisque nibh lectus nam at. Amet iaculis tellus sagittis tor
               subheading="Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
                             faucibus tempus pellentesque fermentum Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
                             faucibus tempus pellentesque fermentum"
-            />a
+            />
             <VolunteerCard
               bgImgLink="/lib/images/freelegalaid.avif"
               heading="Free Legal Aid"
