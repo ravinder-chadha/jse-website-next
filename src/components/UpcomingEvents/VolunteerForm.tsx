@@ -48,7 +48,6 @@ const VolunteerForm = ({ showPopup, setShowPopup }: Display) => {
       <div className="bg-white pt-2 mt-4 px-8 py-4 flex flex-col items-center border border-jse-natural-300 justify-center rounded shadow-xl">
         <HeadingTitle
           title="Volunteer form"
-          subtitle='your contributon matters!'
           className="mx-auto text-center mt-2"
         />
         <Formik
@@ -74,8 +73,8 @@ const VolunteerForm = ({ showPopup, setShowPopup }: Display) => {
           }}
         >
           <Form className='flex flex-col items-center justify-centers md:gap-10 gap-3'>
-            <div className="flex md:flex-row flex-col md:gap-8 md:items-start items-center sm:gap-2">
-              <div className="flex flex-col gap-2">
+            <div className="flex md:flex-row flex-col md:gap-8 gap-3 md:items-start items-center sm:gap-2">
+              <div className="flex flex-col  gap-2">
                 <label htmlFor="name">Name</label>
                 <Field
                   id="name"
@@ -101,26 +100,27 @@ const VolunteerForm = ({ showPopup, setShowPopup }: Display) => {
                   <Field
                     id="phoneno"
                     name="phoneno"
-                    style={{width:"140px"}} 
-                    placeholder="Doe"
-                    className="border border-gray-400  rounded-lg px-3 py-2"
+                    placeholder="123-456-7890"
+                    className="border w-full border-gray-400 inline rounded-lg px-3 py-2"
                   />
                 </div>
+
                 <label htmlFor="email">Email*</label>
                 <Field
                   id="email"
                   name="email"
-                  placeholder="john@acme.com"
+                  placeholder="john@gmail.com"
                   type="email"
                   className="border border-gray-400 rounded-lg px-3 py-2"
                 />
+
               </div>
               <div className="flex flex-col w-full  gap-2">
                 <label htmlFor="street">Address</label>
                 <Field
                   id="street"
                   name="street"
-                  placeholder="House, street "
+                  placeholder="street "
                   className="border border-gray-400 rounded-lg px-3 py-2"
                 />
                 <label htmlFor="city">City</label>
