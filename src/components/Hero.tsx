@@ -14,10 +14,7 @@ export default function Hero() {
               <span className='text-jse-primary-200'>Not an Applause</span>
             </h1>
             <h2 className='md:leading-relaxed font-medium text-white max-w-xl'>
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
-              
+            Volunteer today to serve thousands of people. Help develop a human race inclined to build humanity, happiness, and prosperity.
             </h2>
             <Link href='/about-us'>
             <button
