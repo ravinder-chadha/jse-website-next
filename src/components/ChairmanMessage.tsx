@@ -10,10 +10,10 @@ const ChairmanMessage = () => {
         src="/lib/images/Chairman.jpg"
         height={300}
         className="object-cover object-top border md:h-[300px] md:w-[500px] h-[200px]  rounded-lg"
-      />
+      /> 
 
-      <div className="flex flex-col items-center md:gap-10 gap-5 h-full ">
-        <h3 className="font-serif flex flex-row md:text-xl  text-lg md:w-1/2 w-full text-center py-4">
+      <div className="flex flex-col items-center  md:gap-16 gap-3 md:pr-6 px-3 h-full ">
+        <h3 className="font-serif flex flex-row md:text-xl  text-lg md:w-2/3 w-full text-center py-4">
           <svg
             width="23"
             height="20"
@@ -46,9 +46,9 @@ const ChairmanMessage = () => {
         </h3>
 
 
-        <div className="flex flex-col gap-1">
-          <h1 className="text-bold text-lg text-jse-primary-500">-Tanmay Mukherji (Batch of 1996: Industrial Engineering)</h1>
-          <span className="text-bold text-base text-jse-neutral-400">CEO, Zeta Innovation Labs</span>
+        <div className="flex flex-col  items-end w-full gap-1">
+          <h1 className="text-bold md:text-lg text-base text-jse-primary-500">-Tanmay Mukherji </h1>
+          <span className="text-bold md:text-base text-sm text-jse-neutral-400">CEO, Zeta Innovation Labs</span>
         </div>
       </div>
       </div>

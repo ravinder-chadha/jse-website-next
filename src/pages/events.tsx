@@ -104,7 +104,6 @@ const Events = () => {
           <EventForm showPopup={showEventPopup} setShowPopup={setShowEventPopup} />
           <VolunteerForm showPopup={showVolunteerPopup} setShowPopup={setShowVolunteerPopup} />
 
-
           {/* other events  */}
           <HeadingTitle title="Past events" className="font-black" />
           <div className="grid  md:grid-cols-2 grid-cols-1  md:gap-10 gap-5">
@@ -136,6 +135,14 @@ const Events = () => {
                             faucibus tempus pellentesque fermentum Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
                             faucibus tempus pellentesque fermentum"
             />
+          </div>
+          <div className="flex w-full justify-center">
+            <button
+              type="button"
+              className="inline-flex justify-around items-center space-x-2 text-sm border-2 font-bold rounded-lg px-6 py-3 leading-6 border-jse-primary-500 bg-white hover:text-white hover:bg-jse-primary-400 hover:border-jse-primary-300 focus:ring focus:ring-jse-primary-300 focus:ring-opacity-50 text-jse-primary-500 active:bg-jse-primary-400 active:border-jse-primary-300 hover-white"
+            >
+              Load more
+            </button>
           </div>
 
           {/* anonmyus feedback */}
