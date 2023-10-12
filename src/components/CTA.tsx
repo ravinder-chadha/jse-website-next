@@ -16,10 +16,10 @@ export default function CTA() {
               {/* Heading */}
               <div className='max-w-2xl md:p-0 pl-5 pr-2 '>
                 <h2 className='font-serif text-3xl md:text-4xl font-bold text-jse-primary-500 mb-4'>
-                  Build for a Cause, Support Temple Construction
+                  Place a brick to build a home for the needy. 
                 </h2>
                 <h3 className='md:leading-relaxed text-jse-neutral-900/80'>
-                Support the construction of our Hindu temple and foster spiritual unity. Donate now to be a part of this sacred endeavor.
+                  Donate today to Ashram Construction, and accelerate the wheels to help the needy and devotees.
                 </h3>
               </div>
               {/* END Heading */}

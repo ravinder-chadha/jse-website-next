@@ -20,21 +20,10 @@ const About = () => {
             <HeadingTitle title="What is Jolly Soothing Era?" />
             <Image src="/logo-black.png" className="h-40" alt="" width={200} height={200} />
             <h3 className="md:leading-relaxed text-jse-neutral-900/80">
-              Welcome to Jolly&apos;s Soothing Era, a place of boundless compassion
-              and transformative impact. Inspired by the incredible life and
-              philanthropy of Jolly Jhanji Ji, who left behind a remarkable
-              legacy of assisting the underprivileged, we are dedicated to
-              uplifting lives and fostering unity. As part of the Supreme Master
-              community, we believe in the inherent unity of all beings and
-              strive towards creating a world where no one is left behind.
-              Through our relentless efforts, we provide essential necessities,
-              empower through education, offer sacred journeys, extend financial
-              aid, and ensure the well-being of both humans and animals. By
-              joining hands with us, you become a catalyst for change,
-              contributing to a society where love, equality, and harmony reign.
-              Together, let us weave a tapestry of hope, compassion, and
-              dignity, making a profound difference in the lives of those in
-              need.
+              Jolly&apos;s Soothing Era Foundation is a place of endless kindness and compassion trying to build a transformative impact. The aim of this foundation is influenced by the incredible life and philanthropy of Late Smt. Jolly Jhanji Ji left behind a remarkable legacy of assisting the underprivileged and has always been dedicated to uplifting lives and fostering unity. 
+<br/>We believe in the inherent unity of all beings and strive towards creating a world where no one is left behind. Through our relentless efforts, we provide necessities, empower through education, offer sacred journeys, extend financial aid, and ensure the well-being of humans and animals. 
+<br/>By joining hands with us, you become a catalyst for change, contributing to a society where love, equality, and harmony reign. Together, let us weave a tapestry of hope, compassion, and dignity, making a profound difference in the lives of those in need.
+
             </h3>
           </div>
         </div>
