@@ -32,8 +32,7 @@ const AboutUs = () => {
                 />
               </svg>
               <h3 className="font-serif md:text-xl text-lg md:w-3/4 w-full text-center py-4">
-                Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                faucibus tempus pellentesque fermentum.
+              Promote equality and humanity because, in the eyes of God, all are one. 
               </h3>
               <svg
                 className="self-end"
@@ -50,8 +49,8 @@ const AboutUs = () => {
               </svg>
             </div>
             <div className="text-center my-8">
-              <p className="font-bold">- Author / CEO name</p>
-              <p>Designation</p>
+              <p className="font-bold">- Harsh Jhanji Ji</p>
+              <p>Chairman</p>
             </div>
           </div>
         </div>

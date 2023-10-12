@@ -15,7 +15,7 @@ export default function Footer() {
                 Sign Up for our newsletter
               </div>
               <div className="md:text-xl text-lg">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
+              Cheer up as we work regularly to make people believe again in the good of humanity. 
               </div>
             </div>
             <div className="flex basis-2/5 flex-row text-white md:p-10 px-8  pb-4  items-center justify-around">
