@@ -55,7 +55,7 @@ const VolunteerCard = ({bgImgLink, heading, subheading}:Props) => {
         </h3>
         <p className="md:my-2 mb-2 line-clamp-2 text-ellipsis">{subheading}</p>
         <div className="md:w-1/4 w-3/4">
-          <div className="h-10 flex flex-row items-center bg-jse-neutral-900 w-full rounded-lg justify-around transition-opacity duration-300 hover:opacity-75">
+          <div className="h-10 flex flex-row items-center bg-jse-neutral-900 md:w-full w-fit md:pl-0 pl-3 md:gap-0 gap-2 rounded-lg justify-around transition-opacity duration-300 hover:opacity-75">
             <Link
               href="#"
               className="flex items-center justify-center h-full  md:text-sm text-xs  text-white font-bold md:pl-4 pl-1"

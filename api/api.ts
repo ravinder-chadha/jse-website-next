@@ -61,3 +61,19 @@ export const getEvents = async () => {
       });
   });
 };
+
+export const getArticles = async () => {
+  const query = groq`
+        *[_type=="post"] | order(_createdAt desc)
+        `;
+  return new Promise((resolve, reject) => {
+    client
+      .fetch(query)
+      .then((data) => {
+        resolve(data);
+      })
+      .catch((e) => {
+        reject(e);
+      });
+  });
+};

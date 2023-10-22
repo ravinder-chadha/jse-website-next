@@ -1,24 +1,19 @@
-import React from "react";
 import Image from "next/image";
-import MainLayout from "@/layout/MainLayout";
-import CTA from "@/components/CTA";
-import HeadingTitle from "@/components/common/HeadingTitle";
-import OurStory from "@/components/common/OurStory";
-import VissonMission from "@/components/common/VissonMission";
-import FlagBearer from "@/components/common/FlagBearer";
-import Story from "@/components/common/Story";
-const AboutUs = () => {
+
+const ChairmanMessage = () => {
   return (
-    <MainLayout headerTransition={false}>
-      <>
-        <div className="space-y-16 container xl:max-w-7xl mx-auto px-4 lg:px-8 my-10 flex flex-col justify-center">
-          <HeadingTitle
-            title="About Us"
-            subtitle="Get to know the initiative better"
-            className="mx-auto text-center font-black"
-          />
-          <div className="flex flex-col">
-            <div className="md:mx-32 mx-4 flex flex-row justify-center">
+    <section className="max-w-7xl mx-auto  md:my-20 my-10 px-4">
+    <div className="flex justify-center md:flex-row flex-col border-2 border-jse-primary-400 rounded-lg items-center p-2 gap-5">
+      <Image
+        width={400}
+        alt="chairmanimage"
+        src="/lib/images/vikas.jpg"
+        height={800}
+        className="object-fill object-top border md:h-[300px] md:w-[300px] h-[400px]  rounded-lg"
+      /> 
+
+      <div className="flex flex-col items-center  md:gap-5 gap-3 md:pr-6 px-3 h-full ">
+        <div className="md:mx-32 mx-4 flex flex-row justify-center w-full">
               <svg
                 width="23"
                 height="20"
@@ -32,7 +27,7 @@ const AboutUs = () => {
                 />
               </svg>
               <h3 className="font-serif md:text-xl text-lg md:w-3/4 w-full text-center py-4">
-              Promote equality and humanity because, in the eyes of God, all are one. 
+              Life is so poised.. But the ups and downs of life walks make one&apos;s steps somehow imbalanced.. Our Jolly&apos;s Soothing Era foundation takes care of all who are in pain either physically or financially. Let&apos;s come together and don&apos;t let any needy person alone. We highly appreciate supporters who are passionate about caring the life of others. 
               </h3>
               <svg
                 className="self-end"
@@ -48,59 +43,17 @@ const AboutUs = () => {
                 />
               </svg>
             </div>
-            <div className="text-center my-8">
-              <p className="font-bold">- Harsh Jhanji Ji</p>
-              <p>Chairman</p>
-            </div>
-          </div>
+
+
+        <div className="flex flex-col  items-end w-full gap-1">
+          <h1 className="text-bold md:text-lg text-base text-jse-primary-500">- Mr. Vikas Jhanji</h1>
+          <span className="text-bold md:text-base text-sm text-jse-neutral-400">Delivery Head, Coforge</span>
         </div>
-        <Image src="/lib/images/plantation1.avif" className="relative h-96 w-full object-cover" width={1920} height={1080} alt="plantation" />
-        <div className="relative container xl:max-w-7xl mx-auto my-10 flex flex-col items-center justify-center">
-          <HeadingTitle title="Our Story" className="mx-auto" />
+      </div>
+      </div>
 
-          <div className="relative w-3/5  py-5">
-            {/* Vertical Guide */}
-            <div className="w-10 md:w-12 absolute top-10 left-0 md:bottom-32 bottom-20 flex flex-col justify-center lg:left-1/2 lg:-ml-6" aria-hidden="true">
-              <div className="mx-auto w-1 grow bg-red-400" />
-            </div>
-            {/* END Vertical Guide */}
+    </section>
+  )
+}
 
-            {/* Timeline */}
-            <div className="flex flex-col relative gap-4 pl-10 md:pl-12 lg:pl-0">
-              <Story direction="left" />
-              <Story direction="right" />
-              <Story direction="left" />
-              <Story direction="right" />
-            </div>
-            {/* END Timeline */}
-          </div>
-        </div>
-
-        <div className="container xl:max-w-7xl mx-auto my-20 flex flex-col justify-center">
-          <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 my-20 px-4">
-            <VissonMission />
-          </section>
-          <HeadingTitle title="The flag bearers" className="mx-auto" />
-          <div className="grid md:grid-cols-2 grid-cols-1">
-            <div className="py-4 md:pl-4 md:px-0 px-4">
-              <FlagBearer
-                name="Harsh Jhanji"
-                title="Chairman"
-                textSize="text-2xl"
-              />
-            </div>
-            <div className="grid gap-4 p-4 grid-cols-2 grid-rows-2 mx-auto">
-              <FlagBearer name="Harsh Jhanji " title="Chairman" />
-              <FlagBearer name="Harsh Jhanji" title="Chairman" />
-              <FlagBearer name="Harsh Jhanji" title="Chairman" />
-              <FlagBearer name="Harsh Jhanji" title="Chairman" />
-            </div>
-          </div>
-          <CTA />
-        </div>
-      </>
-    </MainLayout>
-  );
-};
-
-export default AboutUs;
+export default ChairmanMessage;

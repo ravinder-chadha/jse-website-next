@@ -37,7 +37,7 @@ export default function DonateForLife() {
                 </div>
                 <div className='md:w-1/2 space-y-6'>
                   <ImageCard imglink='/lib/images/Plantation.avif' mainTitle='Plantation Drive' imgDesc='Planting 1 lakh trees.'/>
-                  <ImageCard imglink='/lib/images/Plantation2.avif' mainTitle='JSE Youth Club' imgDesc='Youth Club for social work.'/>
+                  <ImageCard imglink='/lib/images/plantation2.avif' mainTitle='JSE Youth Club' imgDesc='Youth Club for social work.'/>
                 </div>
               </div>
             </div>

@@ -39,6 +39,7 @@ export default function UpcomingEvents() {
                   date={item.eventDate}
                   desc={item.body}
                   location={item.location}
+                  id={item._id}
                 />
               );
             })}

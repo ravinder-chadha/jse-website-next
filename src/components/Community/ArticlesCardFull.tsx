@@ -5,8 +5,9 @@ interface Props {
   bgImgLink: string;
   heading: string;
   subheading?: string;
+  link:string;
 }
-const ArticlesCardFull = ({bgImgLink, heading, subheading}:Props) => {
+const ArticlesCardFull = ({bgImgLink, heading, subheading, link}:Props) => {
   if(!subheading){
     return (
         <div className="relative flex flex-col w-full h-40 rounded-lg shadow-sm border border-gray-200 m-2">
@@ -55,7 +56,7 @@ const ArticlesCardFull = ({bgImgLink, heading, subheading}:Props) => {
           <div className="md:w-1/4 w-3/4">
             <div className="h-10 flex flex-row items-center w-fit bg-jse-neutral-900 md:w-full rounded-lg justify-around transition-opacity duration-300 hover:opacity-75">
               <Link
-                href="#"
+                href={link}
                 className="flex items-center justify-center w-full  h-full   md:text-sm text-xs  text-white font-bold md:pl-4 px-2"
               >
                 Learn More

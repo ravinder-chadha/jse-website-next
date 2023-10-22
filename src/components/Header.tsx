@@ -113,8 +113,8 @@ const Header = ({ headerTransition }:HeaderProps) => {
 
           {/* mobile menu */}
           {isMobileMenuOpen && (
-            <div className="md:hidden  absolute top-24 right-0 bg-white border-b border-gray-300 shadow-lg">
-              <nav className="space-y-4 text-base p-4">
+            <div className="md:hidden  absolute top-24  right-0 bg-white border-b border-gray-300 shadow-lg">
+              <nav className="flex flex-col gap-4 text-base p-4">
                 <Link
                   href="/about-us"
                   className="text-jse-neutral-900 hover:text-jse-neutral-500 block">
@@ -137,7 +137,7 @@ const Header = ({ headerTransition }:HeaderProps) => {
                 </Link>
                 <Link
                   href="/donate"
-                  className="w-full bg-jse-primary-500 text-white font-semibold rounded-lg py-2 px-4 hover:bg-jse-primary-400 focus:outline-none focus:ring focus:ring-jse-primary-300 focus:ring-opacity-50 active:bg-jse-primary-400"
+                  className="w-full bg-jse-primary-500  text-white font-semibold rounded-lg py-2 px-4 hover:bg-jse-primary-400 focus:outline-none focus:ring focus:ring-jse-primary-300 focus:ring-opacity-50 active:bg-jse-primary-400"
                 >
                   Donate Now
                 </Link>
