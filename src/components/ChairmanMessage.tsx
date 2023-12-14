@@ -5,10 +5,10 @@ const ChairmanMessage = () => {
     <section className="max-w-7xl mx-auto  md:my-20 my-10 px-4">
     <div className="flex justify-center md:flex-row flex-col border-2 border-jse-primary-400 rounded-lg items-center p-2 gap-5">
       <Image
-        width={400}
+        width={1000}
         alt="chairmanimage"
         src="/lib/images/vikas.jpg"
-        height={800}
+        height={1000}
         className="object-fill object-top border md:h-[300px] md:w-[300px] h-[400px]  rounded-lg"
       /> 
 

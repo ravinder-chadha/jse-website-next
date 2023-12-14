@@ -32,15 +32,15 @@ const Events = () => {
             subtitle="Get to know the initiative better"
             className="mx-auto text-center font-black"
           />
-          <Image src="/lib/images/free_edu.avif" alt="Attemp Image" className="rounded-xl object-cover h-72 w-full" width={1000} height={1000}></Image>
+          <Image src="/lib/images/bdc_17-12-23.jpg" alt="Attemp Image" className="rounded-xl object-fit h-full w-full" width={1000} height={1000}></Image>
           {/* content */}
           <div className="grid grid-cols-2">
             {/* left side contetn */}
             <div className="flex flex-col md:mr-0 mr-2  md:gap-8 gap-4">
               {/* title and date */}
               <div className="flex flex-col md:gap-4 gap-2">
-                <h1 className="font-serif text-2xl md:text-4xl font-semibold">  6th Mega Blood Donation and eye checkup Camp</h1>
-                <p className="text-lg font-normal">4th oct 2023</p>
+                <h1 className="font-serif text-2xl md:text-4xl font-semibold">5th Mega Medical Camp & Blood Donation Camp</h1>
+                <p className="text-lg font-normal">17th Dec 2023</p>
               </div>
               {/* register button */}
               <button
@@ -67,12 +67,7 @@ const Events = () => {
 
             {/* paragraph content */}
             <div className="flex flex-col justify-start">
-              <p className="md:text-base test-sm  mb-4">Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                faucibus tempus pellentesque fermentum Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                faucibus tempus pellentesque fermentum
-                Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                faucibus tempus pellentesque fermentum Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                faucibus tempus pellentesque fermentum</p>
+              <p className="md:text-base test-sm  mb-4">Join us on Sunday, 17th December, at 11 am for the 5th Mega Medical Camp and Blood Donation Drive at Gurudwara Bhai Lallo Ji, near Ramgarhia Model School, Santokhpura, Jalandhar. Organized by Jolly&apos;s Soothing Era Foundation, this event features chest and bone specialists. JSE is also offering free cataract surgeries for the needy. General check-ups and free tests for BP, Sugar, Neuropathy, BMI, and ECG are also available. Your participation contributes to the cause of humanity. Don&apos;t miss this opportunity for a healthier community!</p>
             </div>
           </div>
 
@@ -110,30 +105,22 @@ const Events = () => {
             <VolunteerCard
               bgImgLink="/lib/images/elderly_care.avif"
               heading="Elderly Care"
-              subheading="Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum"
+              subheading="We enhance elderly care through tailored health services, companionship programs, and community initiatives, ensuring a dignified and enriched life for seniors."
             />
             <VolunteerCard
               bgImgLink="/lib/images/free_edu.avif"
               heading="Free Education"
-              subheading="Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum"
+              subheading="We empower communities through free education, fostering access to knowledge and opportunities for a brighter future."
             />
             <VolunteerCard
               bgImgLink="/lib/images/foodrs10.avif"
               heading="Food @ Rs.10"
-              subheading="Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum"
+              subheading="We addresses hunger by providing affordable food at Rs. 10, ensuring accessibility and sustenance for those in need."
             />
             <VolunteerCard
               bgImgLink="/lib/images/freelegalaid.avif"
               heading="Free Legal Aid"
-              subheading="Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum"
+              subheading="We provide free legal aid to the underprivileged, ensuring access to justice and equality for all."
             />
           </div>
           <div className="flex w-full justify-center">

@@ -26,7 +26,7 @@ const EventCard = ( {imglink = "", heading, date, desc}: Props ) => {
             />
           </svg>
         </div>
-        <Image src={imglink} alt='Featured Image of blog post' className='w-full h-64 object-fill' width={100} height={100}></Image>
+        <Image src={imglink} alt='Featured Image of blog post' className='w-full h-64 object-fill' width={1000} height={1000}></Image>
       </Link>
       <div className='p-5 lg:p-6'>
         <div className='mb-3'>

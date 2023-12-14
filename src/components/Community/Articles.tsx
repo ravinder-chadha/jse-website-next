@@ -25,7 +25,7 @@ const SundayArticles = ({ imglink = "", heading, articleText }: Props) => {
             />
           </svg>
         </div>
-        <Image src={imglink} alt="SomeNatureImage" className="rounded-2xl md:h-64 h-full w-full object-cover " width={100} height={100}></Image>
+        <Image src={imglink} alt="SomeNatureImage" className="rounded-2xl md:h-64 h-full w-full object-cover " width={1000} height={1000}></Image>
       </Link>
 
       <div className="flex flex-col justify-start items-start w-full md:mx-16">
