@@ -12,7 +12,7 @@ interface Props {
 const EventCard = ( {imglink = "", heading, date, desc}: Props ) => {
   return (
     <div className='w-full flex flex-col items-center bg-white rounded-lg ring-1 ring-jse-neutral-300 overflow-hidden shadow-sm'>
-      <Link href='#' className='block relative group w-full'>
+      <Link href='/events' className='block relative group w-full'>
         <div className='flex items-center justify-center absolute inset-0 bg-jse-primary-400 bg-opacity-75 opacity-0 transition ease-out duration-150 group-hover:opacity-100'>
           <svg
             fill='currentColor'
@@ -37,7 +37,7 @@ const EventCard = ( {imglink = "", heading, date, desc}: Props ) => {
         </div>
         <h4 className='font-bold text-lg sm:text-xl mb-2'>
           <Link
-            href='#'
+            href='/events'
             className='leading-7 text-gray-800 hover:text-gray-600 line-clamp-2'>
             {heading}
           </Link>
