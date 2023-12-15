@@ -32,7 +32,7 @@ const Events = () => {
             subtitle="Get to know the initiative better"
             className="mx-auto text-center font-black"
           />
-          <Image src="/lib/images/bdc_17-12-23.jpg" alt="Attemp Image" className="rounded-xl object-fit h-full w-full" width={1000} height={1000}></Image>
+          <Image src="/lib/images/bdc_17-12-2023.jpg" alt="Attemp Image" className="rounded-xl object-fit h-full w-full" width={1000} height={1000}></Image>
           {/* content */}
           <div className="grid grid-cols-2">
             {/* left side contetn */}
