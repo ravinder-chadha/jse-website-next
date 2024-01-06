@@ -14,7 +14,7 @@ const WaysToDonate = () => {
           </h3>
           <div className="flex flex-col items-center justify-center border  border-jse-neutral-300  p-3 rounded-lg">
             <Image src="/lib/donate/qrcode.png" className="w-64 h-64 border-jse-neutral-300" width={1000} height={1000} alt="QR Code" />
-            <Image src="/upi.png" width={1000} height={1000} className=" h-6 w-56 mt-2" alt="UPI" />
+            <Image src="/lib/donate/upi.png" width={1000} height={1000} className=" h-6 w-56 mt-2" alt="UPI" />
             <h2 className="font-bold text-xl my-4">Jollys Soothing Era</h2>
             <div className="flex flex-col items-center justify-center">
               <p className="text-jse-neutral-400 text-lg font-medium">UPI ID</p>
