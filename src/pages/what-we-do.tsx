@@ -41,8 +41,7 @@ Ultrices nisi lacus quisque nibh lectus nam at. Amet iaculis tellus sagittis tor
                 </svg>
               </div>
               <h3 className="font-serif md:text-3xl text-2xl leading-tight w-3/4 text-left md:p-6 px-2 py-6 font-semibold">
-                Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                faucibus tempus pellentesque fermentum.
+                Kindness is free. Pass it on to build a compassionate society.
               </h3>
               <div className="flex justify-end w-3/4">
                 <svg
@@ -60,8 +59,8 @@ Ultrices nisi lacus quisque nibh lectus nam at. Amet iaculis tellus sagittis tor
                 </svg>
               </div>
               <div className="text-left my-8 w-3/4">
-                <p className="font-bold">- Author / CEO name</p>
-                <p>Designation</p>
+                <p className="font-bold">- Smt. Jolly Jhanji Ji</p>
+                <p>Founder</p>
               </div>
             </div>
           </div>
@@ -70,30 +69,22 @@ Ultrices nisi lacus quisque nibh lectus nam at. Amet iaculis tellus sagittis tor
             <VolunteerCard
               bgImgLink="/lib/images/elderly_care.avif"
               heading="Elderly Care"
-              subheading="Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum"
+              subheading="We enhance elderly care through tailored health services, companionship programs, and community initiatives, ensuring a dignified and enriched life for seniors."
             />
             <VolunteerCard
               bgImgLink="/lib/images/free_edu.avif"
               heading="Free Education"
-              subheading="Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum"
+              subheading="We empower communities through free education, fostering access to knowledge and opportunities for a brighter future."
             />
             <VolunteerCard
               bgImgLink="/lib/images/foodrs10.avif"
               heading="Food @ Rs.10"
-              subheading="Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum"
+              subheading="We addresses hunger by providing affordable food at Rs. 10, ensuring accessibility and sustenance for those in need."
             />
             <VolunteerCard
               bgImgLink="/lib/images/freelegalaid.avif"
               heading="Free Legal Aid"
-              subheading="Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-                            faucibus tempus pellentesque fermentum"
+              subheading="We provide free legal aid to the underprivileged, ensuring access to justice and equality for all."
             />
           </div>
           <div className="flex justify-center">

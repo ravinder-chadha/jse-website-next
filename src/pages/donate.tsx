@@ -35,8 +35,7 @@ const Donate = () => {
               />
             </svg>
             <h3 className="font-serif md:text-xl text-lg md:w-3/4 w-full text-center py-4">
-              Lorem ipsum dolor sit amet consectetur. Amet cras dignissim
-              faucibus tempus pellentesque fermentum.
+              Your act of kindness, in any form, can help today a person, an animal, or a family, generating a chain of compassion.
             </h3>
             <svg
               className="self-end"
