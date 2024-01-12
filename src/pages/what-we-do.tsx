@@ -20,8 +20,7 @@ const OurAttempts = () => {
             ImageSrc="/lib/images/free_edu.avif"
             Title="Helping the poor children with quality education"
             SubTitle="82,000 children benefitted"
-            Description="Lorem ipsum dolor sit amet consectetur. A arcu non diam accumsan aenean. Quis justo ullamcorper elit urna vulputate sit. Luctus maecenas cum platea pulvinar tortor auctor. Nulla et maecenas vitae commodo nisi arcu. Ultrices vestibulum augue pharetra penatibus. Euismod eu non aliquam pellentesque.
-Ultrices nisi lacus quisque nibh lectus nam at. Amet iaculis tellus sagittis tortor arcu vel rutrum. Purus sit bibendum urna morbi mi donec diam mi nibh. Tortor aenean platea pharetra nibh felis sodales nisi arcu. Blandit felis adipiscing et elit dis dolor sed. Elementum non netus maecenas cursus proin elit non turpis. Arcu a enim odio aliquam. Commodo matt"
+            Description="Jolly&apos;s Soothing Era, our dedicated NGO, is committed to making a positive impact on the lives of underprivileged children through quality education. We actively support these youngsters by donating old books, providing essential funding, and facilitating their educational journey. Our initiative extends beyond mere assistance, as we ensure access to new books and cover school fees, fostering an environment where learning is not limited by financial constraints. Operating across multiple schools, our efforts aim to maximize the reach of our assistance, empowering a greater number of children to break the cycle of poverty through education."
           />
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 my-20 px-4">
             <Image src="/lib/images/Founder.jpg" alt="Hero Image" className="rounded-xl relative mx-auto h-fit" width={564} height={564}></Image>

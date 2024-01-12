@@ -3,7 +3,6 @@ import Image from "next/image";
 import MainLayout from "@/layout/MainLayout";
 import CTA from "@/components/CTA";
 import HeadingTitle from "@/components/common/HeadingTitle";
-import OurStory from "@/components/common/OurStory";
 import VissonMission from "@/components/common/VissonMission";
 import FlagBearer from "@/components/common/FlagBearer";
 import Story from "@/components/common/Story";
@@ -87,13 +86,14 @@ const AboutUs = () => {
                 name="Harsh Jhanji"
                 title="Chairman"
                 textSize="text-2xl"
+                src = "/lib/images/Chairman.jpg"
               />
             </div>
             <div className="grid gap-4 p-4 grid-cols-2 grid-rows-2 mx-auto">
-              <FlagBearer name="Harsh Jhanji " title="Chairman" />
-              <FlagBearer name="Harsh Jhanji" title="Chairman" />
-              <FlagBearer name="Harsh Jhanji" title="Chairman" />
-              <FlagBearer name="Harsh Jhanji" title="Chairman" />
+              <FlagBearer name="Vinish Mittu" title="Vice Chairman" src ="/lib/images/vice_chairman.png"/>
+              <FlagBearer name="Om Jhanji" title="Executive Director" src="/lib/images/person_icon.png"/>
+              <FlagBearer name="Ravinder Chadha" title="IT Head" src="/lib/images/it_head.jpg"/>
+              <FlagBearer name="Karan Chadha" title="Treasurer" src="/lib/images/treasurer.jpeg"/>
             </div>
           </div>
           <CTA />

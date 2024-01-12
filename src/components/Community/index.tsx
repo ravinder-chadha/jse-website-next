@@ -26,11 +26,13 @@ export default function Community() {
               <Podcast />
             </div>
             <div className=" flex items-center justify-center mb-8">
+            <Link href="/community">
             <button
               type='button'
               className=' border font-semibold rounded-lg py-2 leading-6 px-4 hover:border-jse-primary-500 text-white hover:bg-jse-primary-500'>
               Explore More
             </button>
+            </Link>
             </div>
             <SubSectionHeader title="Sunday Articles" />
             <div className="flex flex-col gap-4 ">

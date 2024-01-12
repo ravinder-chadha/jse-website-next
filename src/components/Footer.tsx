@@ -1,5 +1,6 @@
 import MaskImage from "./common/MaskImage";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -49,15 +50,25 @@ export default function Footer() {
           <div className="bg-jse-neutral-900 flex md:flex-row justify-between flex-col text-jse-neutral-400 p-4">
             <div className="flex flex-row items-stretch justify-between md:w-3/5 w-full">
             <div className="flex md:flex-row flex-col md:w-3/5 md:pl-4  w-full justify-between  text-[11px]">
+              <Link href="/privacy-policy">
               <p>Privacy Policy</p>
+              </Link>
+              <Link href="/terms-conditions">
               <p>Terms and Conditions</p>
+              </Link>
               <p>Tax Exemption</p>
               <p>Jobs</p>
             </div>
             <div className="flex md:flex-row flex-col md:w-1/5 w-full md:items-start items-end  justify-evenly px-2 gap-4 text-[20px]">
-              <i className="fab fa-facebook text-[#3b5998]"></i>
+              <Link href="https://www.facebook.com/jollysoothingera/">
+              <i className="fab fa-facebook text-[#3b5998]"></i> 
+              </Link>
+              <Link href="https://www.instagram.com/jollysoothingera/">
               <i className="fab fa-instagram text-[#e4405f]"></i>
-              <i className="fab fa-twitter text-[#1da1f2]"></i>
+              </Link>
+              <Link href="https://youtube.com/@jollysoothingera?si=roDM9dIlD0a2lZzM">
+              <i className="fab fa-youtube text-[#c4302b]"></i>
+              </Link>
             </div>
             </div>
             <div className="flex flex-row md:w-2/5 w-full md:justify-end justify-center md:pr-8 pr-0 md:pt-0 pt-4 text-[13px]">

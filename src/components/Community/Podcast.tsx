@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 const Podcast = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -12,6 +13,7 @@ const Podcast = () => {
   };
 
   return (
+    <Link href="/community">
     <div
       className={`bg-jse-neutral-900 w-fit rounded-2xl p-4 flex flex-row justify-around items-center cursor-pointer md:my-8 my-4 mx-2 ${
         isHovered ? 'bg-jse-primary-500' : ''
@@ -35,6 +37,7 @@ const Podcast = () => {
         <p className="text-xs font-light">29 mins</p>
       </div>
     </div>
+    </Link>
   );
 };
 

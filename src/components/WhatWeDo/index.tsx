@@ -1,12 +1,13 @@
 import HeadingTitle from "../common/HeadingTitle";
 import VolunteerCard from "./VolunteerCard";
 import Marquee from "react-fast-marquee";
+import Link from "next/link";
 
 export default function WhatWeDo() {
   return (
     <>
       {/* What We Do Section */}
-      <div className="space-y-4 md:space-y-16 container xl:max-w-7xl mx-auto px-4 lg:px-8 my-10 flex flex-col justify-center">
+      <div className="space-y-4 md:space-y-16 container xl:max-w-7xl mx-auto my-10 flex flex-col justify-center">
         {/*  */}
         <HeadingTitle title="What we do..." className="mx-auto text-center" />
         {/* Scrolling Cards */}
@@ -27,6 +28,7 @@ export default function WhatWeDo() {
         {/* END Of Scrolling Cards */}
         {/* Explore All button */}
         <div className="flex justify-center mt-6">
+          <Link href="/what-we-do">
           <button
             type="button"
             className="inline-flex items-center space-x-2 text-sm border-2 font-bold rounded-lg px-6 py-3 leading-6 border-jse-primary-500 bg-white hover:text-white hover:bg-jse-primary-400 hover:border-jse-primary-300 focus:ring focus:ring-jse-primary-300 focus:ring-opacity-50 text-jse-primary-500 active:bg-jse-primary-400 active:border-jse-primary-300 hover-white"
@@ -56,6 +58,7 @@ export default function WhatWeDo() {
               </g>
             </svg>
           </button>
+          </Link>
         </div>
       </div>
       {/* END What We Do Section */}

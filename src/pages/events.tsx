@@ -32,15 +32,15 @@ const Events = () => {
             subtitle="Get to know the initiative better"
             className="mx-auto text-center font-black"
           />
-          <Image src="/lib/images/bdc_17-12-2023.jpg" alt="Attemp Image" className="rounded-xl object-fit h-full w-full" width={1000} height={1000}></Image>
+          <Image src="/lib/images/chownki_2024.jpg" alt="Attemp Image" className="rounded-xl object-fit h-full w-full" width={2000} height={2000}></Image>
           {/* content */}
           <div className="grid grid-cols-2">
             {/* left side contetn */}
             <div className="flex flex-col md:mr-0 mr-2  md:gap-8 gap-4">
               {/* title and date */}
               <div className="flex flex-col md:gap-4 gap-2">
-                <h1 className="font-serif text-2xl md:text-4xl font-semibold">5th Mega Medical Camp & Blood Donation Camp</h1>
-                <p className="text-lg font-normal">17th Dec 2023</p>
+                <h1 className="font-serif text-2xl md:text-4xl font-semibold">दूसरी भव्य वार्षिक चौंकी - Second Grand Annual Chownki</h1>
+                <p className="text-lg font-normal">20 and 21 Jan 2024</p>
               </div>
               {/* register button */}
               <button
@@ -67,7 +67,7 @@ const Events = () => {
 
             {/* paragraph content */}
             <div className="flex flex-col justify-start">
-              <p className="md:text-base test-sm  mb-4">Join us on Sunday, 17th December, at 11 am for the 5th Mega Medical Camp and Blood Donation Drive at Gurudwara Bhai Lallo Ji, near Ramgarhia Model School, Santokhpura, Jalandhar. Organized by Jolly&apos;s Soothing Era Foundation, this event features chest and bone specialists. JSE is also offering free cataract surgeries for the needy. General check-ups and free tests for BP, Sugar, Neuropathy, BMI, and ECG are also available. Your participation contributes to the cause of humanity. Don&apos;t miss this opportunity for a healthier community!</p>
+              <p className="md:text-base test-sm  mb-4">Celebrating the birth anniversary of Smt. Kailashi Jolly Jhanji Ji, Join us on the 20th and 21st of January, 2024 in the second glorious annual Balaji and Khatushyam Ji ki Chownki. Sobha Yatra starts on 20th January 2024 at 2 PM and will move through New Lakshmipura, Hoshiarpur Road. The Balaji and Khatushaym Ji ki Chownki starts on 21st January 2024 at 6 PM.  Join us to chant the name of God along with Kumar Gourav. Also don&apos;t miss the prasad. Jolly&apos;s Soothing Era Foundation is looking forward to your participation in the event. Jai Shree Ram.</p>
             </div>
           </div>
 
@@ -140,8 +140,26 @@ const Events = () => {
               <textarea
                 id="feedback"
                 className="border md:w-11/12 w-full mt-2 border-gray-400 rounded-lg px-3 py-2"
+                placeholder="Write your feedback here"
                 rows={4}  // You can specify the number of rows you want to display
               ></textarea>
+              <button
+                type="button"
+                className="inline-flex justify-around items-center space-x-2 text-sm border-2 font-bold rounded-lg px-6 py-3 leading-6 border-jse-primary-500 bg-white hover:text-white hover:bg-jse-primary-400 hover:border-jse-primary-300 focus:ring focus:ring-jse-primary-300 focus:ring-opacity-50 text-jse-primary-500 active:bg-jse-primary-400 active:border-jse-primary-300 hover-white"
+                onClick={() => {
+                  // the text in the textarea is already empty then alert the user to write something
+                  if ((document.getElementById("feedback") as HTMLInputElement).value == "") {
+                    alert("Please write something before submitting");
+                    return;
+                  }
+                  // erase the text in the textarea
+                  (document.getElementById("feedback") as HTMLInputElement).value = "";
+                  // when the user submits the feedback then alert the user that the feedback has been submitted
+                  alert("Your feedback has been submitted");
+                }}
+              >
+                Submit
+              </button>
             </div>
           </div>
 
