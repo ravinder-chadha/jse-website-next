@@ -11,7 +11,6 @@ const ChairmanMessage = () => {
         height={1000}
         className="object-fill object-top border md:h-[300px] md:w-[300px] h-[400px]  rounded-lg"
       /> 
-
       <div className="flex flex-col items-center  md:gap-5 gap-3 md:pr-6 px-3 h-full ">
         <div className="md:mx-32 mx-4 flex flex-row justify-center w-full">
               <svg
@@ -43,8 +42,6 @@ const ChairmanMessage = () => {
                 />
               </svg>
             </div>
-
-
         <div className="flex flex-col  items-end w-full gap-1">
           <h1 className="text-bold md:text-lg text-base text-jse-primary-500">- Mr. Vikas Jhanji</h1>
           <span className="text-bold md:text-base text-sm text-jse-neutral-400">Delivery Head, Coforge</span>

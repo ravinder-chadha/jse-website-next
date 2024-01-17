@@ -5,6 +5,7 @@ import youtube from "./youtube";
 import post from "./post";
 import blockContent from "./blockContent";
 import podcast from "./podcast";
+import article from "./articles";
 
 export const schemaTypes=[
     attempt,
@@ -13,5 +14,6 @@ export const schemaTypes=[
     youtube,
     post,
     blockContent,
-    podcast
+    podcast, 
+    article,
 ]

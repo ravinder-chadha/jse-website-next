@@ -68,7 +68,7 @@ const VolunteerForm = ({ showPopup, setShowPopup }: Display) => {
             values: Values,
             { setSubmitting }: FormikHelpers<Values>
           ) => {
-            console.log(values);
+            // console.log(values);
             setSubmitting(false);
           }}
         >

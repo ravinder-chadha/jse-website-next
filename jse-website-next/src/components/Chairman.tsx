@@ -16,11 +16,10 @@ const About = () => {
               className="text-jse-neutral-900/80 bg-jse-neutral-100"
             />
             <h3 className="md:leading-relaxed text-jse-neutral-900/80">
-            As God says, we are all one. There are indeed people with difficulties, hardships, and challenges; but it is a moral and ethical duty of a human being to be compassionate and kind to those. It is our social responsibility as humans to contribute to uplift society as a whole, and live a meaningful life to serve it. 
-<br/>Jolly&apos;s Soothing Era Foundation aims to accelerate the feeling of equality, compassion, kindness, and humanity in society. Our goal is to provide society with necessities, including but not limited to education services, health services, sporting facilities, sacred travels, financial help for widows, legal assistance, and building old-age homes, ashrams, and devalyas. 
-<br/>Our foundation also works for the welfare of animals with a special team of volunteers. We aim to build a healthy environment and donate plants every weekend for the cause. Social equality and the upliftment of underprivileged people in our society is our utmost priority. 
-<br/>Finally, I would like to thank the donors, volunteers, and members of the foundation who are regularly doing their best to help achieve the goal of a healthy and sound society. The family of these donors, volunteers, and regular members is what we are utmost proud of. 
-
+              As God says, we are all one. There are indeed people with difficulties, hardships, and challenges; but it is a moral and ethical duty of a human being to be compassionate and kind to those. It is our social responsibility as humans to contribute to uplift society as a whole, and live a meaningful life to serve it.
+              <br />Jolly&apos;s Soothing Era Foundation aims to accelerate the feeling of equality, compassion, kindness, and humanity in society. Our goal is to provide society with necessities, including but not limited to education services, health services, sporting facilities, sacred travels, financial help for widows, legal assistance, and building old-age homes, ashrams, and devalyas.
+              <br />Our foundation also works for the welfare of animals with a special team of volunteers. We aim to build a healthy environment and donate plants every weekend for the cause. Social equality and the upliftment of underprivileged people in our society is our utmost priority.
+              <br />Finally, I would like to thank the donors, volunteers, and members of the foundation who are regularly doing their best to help achieve the goal of a healthy and sound society. The family of these donors, volunteers, and regular members is what we are utmost proud of.
             </h3>
           </div>
         </div>
