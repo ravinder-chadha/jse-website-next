@@ -25,7 +25,7 @@ const Community = () => {
   const urlForAudio = (podcast: any) => {
     if (podcast && podcast.audio && podcast.audio.asset && podcast.audio.asset._ref) {
       const audioFilename = podcast.audio.asset._ref.split("-")[1];
-      const baseUrl = "https://your-base-url/"; 
+      const baseUrl = "https://your-base-url/";
       return baseUrl + audioFilename;
     } else {
       return ''; 
