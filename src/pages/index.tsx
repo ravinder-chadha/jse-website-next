@@ -19,7 +19,7 @@ export default function Home() {
   const [showPopup, setShowPopup] = useState(true);
   return (
     <main className="grid">
-      <UnderProgressPopup showPopup={showPopup} setShowPopup={setShowPopup} />
+      {/* <UnderProgressPopup showPopup={showPopup} setShowPopup={setShowPopup} /> */}
       <MainLayout>
         <Hero />
         <CTA />
