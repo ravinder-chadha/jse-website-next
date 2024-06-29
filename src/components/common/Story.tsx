@@ -1,4 +1,10 @@
-export default function Story({ direction }:any) {
+interface props {
+  direction: string;
+  title: string;
+  desc: string;
+  date: string;
+}
+export default function Story({ direction, title, desc, date }: props) {
   if (direction === 'left') {
     return (
       <div className="relative lg:w-1/2 lg:pr-6 lg:mr-auto">
@@ -6,11 +12,14 @@ export default function Story({ direction }:any) {
           <div className="w-4 h-4 bg-red-500 rounded-full ring ring-red-300  " />
         </div>
         <div className="  rounded-xl p-4 flex flex-col items-start  border border-red-500  ">
-          <h4 className="font-semibold mb-2">
-            3.0 update is now live!
+          <h4 className="font-semibold w-full flex justify-between mb-2">
+            {title}
+            <span className="font-normal ml-3">
+              {date}
+            </span>
           </h4>
           <p className="text-sm leading-relaxed text-left">
-            Its finally here are comes packed with many awesome features. and let us know what you think
+            {desc}
           </p>
         </div>
       </div>
@@ -24,12 +33,14 @@ export default function Story({ direction }:any) {
           <div className="w-4 h-4 bg-red-500 rounded-full ring ring-red-300 " />
         </div>
         <div className="  rounded-xl p-4 flex flex-col items-start  border border-red-500  ">
-          <h4 className="font-semibold mb-2">
-            Maintenance notice
+          <h4 className="font-semibold w-full flex justify-between  mb-2">
+            {title}
+            <span className="font-normal ml-5">
+              {date}
+            </span>
           </h4>
           <p className="text-sm leading-relaxed text-left">
-            We are going to apply some security fixes next week. Please check out the  for more information about any downtime.
-
+            {desc}
           </p>
         </div>
       </div>

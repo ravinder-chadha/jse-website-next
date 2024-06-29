@@ -1,46 +1,126 @@
+// get the query id param from the url and check if there's any event from the getEvent api call that matches the id param
 import CTA from "@/components/CTA";
-import { useState } from "react";
 import EventForm from "@/components/UpcomingEvents/EventForm";
 import VolunteerCard from "@/components/WhatWeDo/VolunteerCard";
 import HeadingTitle from "@/components/common/HeadingTitle";
-import MainLayout from "@/layout/MainLayout";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import VolunteerForm from "@/components/UpcomingEvents/VolunteerForm";
 
-const Events = () => {
+import MainLayout from "@/layout/MainLayout";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { useEffect } from "react";
+import { getEvents } from "../../../api/api";
+import { client } from "./../../../config/sanity";
+import imageUrlBuilder from "@sanity/image-url";
+import Image from "next/image";
+import Link from "next/link";
 
+
+export default function Events() {
+  const router = useRouter();
+  const { id } = router.query;
+  console.log("id", id);
+
+  const [data, setData] = useState<any>([]);
+  const [eventsToShow, setEventsToShow] = useState(2);
   const [showVolunteerPopup, setShowVolunteerPopup] = useState(false);
   const [showEventPopup, setShowEventPopup] = useState(false);
+  const [loading, setLoading] = useState(true); // Add loading state
+
+  const handleLoadMore = () => {
+    setEventsToShow((prev) => {
+      const nextValue = prev + 2;
+
+      // Reset to 2 when all items are shown
+      return nextValue >= data.length ? 2 : nextValue;
+    });
+  };
+
+  function urlFor(source: any) {
+    return builder.image(source);
+  }
 
   function setVolunteerDisplay() {
     setShowVolunteerPopup(true);
   }
-  console.log(showVolunteerPopup);
+
   function setEventDisplay() {
     setShowEventPopup(true);
   }
-  console.log(showEventPopup);
+
+
+  const builder = imageUrlBuilder(client);
+
+  useEffect(() => {
+    getEvents()
+      .then((res) => {
+        console.log("events---->", res);
+        setData(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false); 
+      });
+  }, []);
+
+  const formatDate = (date: any) => {
+    const d = new Date(date);
+    // format : 20th January 2024
+    return `${d.getDate()}th ${d.toLocaleString("default", { month: "long" })} ${d.getFullYear()}`;
+  };
+
+  const event = data && data.find((article: any) => article._id === id);
+
+  if (loading) {
+    // Display a loading indicator while data is being fetched
+    return (
+      <>
+        <MainLayout>
+          <div className="flex flex-col items-center justify-center w-full h-screen">
+            <p className="text-lg font-semibold">Loading...</p>
+          </div>
+        </MainLayout>
+      </>
+    );
+  }
+  if (!event) {
+    return (
+      <>
+        <MainLayout>
+          <div className="flex flex-col items-center justify-center w-full h-screen">
+            <h1 className="text-4xl font-bold">404</h1>
+            <p className="text-lg font-semibold">Page not found</p>
+            <Link href="/">
+              <div className="text-lg font-semibold text-jse-primary-500 hover:text-jse-primary-400">Go back to home</div>
+            </Link>
+          </div>
+        </MainLayout>
+      </>
+    );
+  }
+
+
 
   return (
     <>
-      <MainLayout headerTransition={false}>
+      <MainLayout>
         <div className="md:space-y-16 space-y-8 container xl:max-w-7xl mx-auto px-4 lg:px-8 md:my-10 my-5 flex flex-col justify-center">
           <HeadingTitle
             title="Events"
             subtitle="Get to know the initiative better"
             className="mx-auto text-center font-black"
           />
-          <Image src="/lib/images/chownki_2024.jpg" alt="Attemp Image" className="rounded-xl object-fit h-full w-full" width={2000} height={2000}></Image>
+          <Image src={event && urlFor(event.mainImage).url()} alt="Attemp Image" className="rounded-xl object-fit h-full w-full" width={2000} height={2000}></Image>
           {/* content */}
           <div className="grid grid-cols-2">
             {/* left side contetn */}
             <div className="flex flex-col md:mr-0 mr-2  md:gap-8 gap-4">
               {/* title and date */}
               <div className="flex flex-col md:gap-4 gap-2">
-                <h1 className="font-serif text-2xl md:text-4xl font-semibold">दूसरी भव्य वार्षिक चौंकी - Second Grand Annual Chownki</h1>
-                <p className="text-lg font-normal">20 and 21 Jan 2024</p>
+                <h1 className="font-serif text-2xl mr-3 md:text-4xl font-semibold">{event && event.title}</h1>
+                <p className="text-lg font-normal">{event && formatDate(event.eventDate)} </p>
               </div>
               {/* register button */}
               <button
@@ -67,7 +147,7 @@ const Events = () => {
 
             {/* paragraph content */}
             <div className="flex flex-col justify-start">
-              <p className="md:text-base test-sm  mb-4">Celebrating the birth anniversary of Smt. Kailashi Jolly Jhanji Ji, Join us on the 20th and 21st of January, 2024 in the second glorious annual Balaji and Khatushyam Ji ki Chownki. Sobha Yatra starts on 20th January 2024 at 2 PM and will move through New Lakshmipura, Hoshiarpur Road. The Balaji and Khatushaym Ji ki Chownki starts on 21st January 2024 at 6 PM.  Join us to chant the name of God along with Kumar Gourav. Also don&apos;t miss the prasad. Jolly&apos;s Soothing Era Foundation is looking forward to your participation in the event. Jai Shree Ram.</p>
+              <p className="md:text-base test-sm  mb-4">{event.body[0].children[0].text}</p>
             </div>
           </div>
 
@@ -102,35 +182,35 @@ const Events = () => {
           {/* other events  */}
           <HeadingTitle title="Past events" className="font-black" />
           <div className="grid  md:grid-cols-2 grid-cols-1  md:gap-10 gap-5">
-            <VolunteerCard
-              bgImgLink="/lib/images/elderly_care.avif"
-              heading="Elderly Care"
-              subheading="We enhance elderly care through tailored health services, companionship programs, and community initiatives, ensuring a dignified and enriched life for seniors."
-            />
-            <VolunteerCard
-              bgImgLink="/lib/images/free_edu.avif"
-              heading="Free Education"
-              subheading="We empower communities through free education, fostering access to knowledge and opportunities for a brighter future."
-            />
-            <VolunteerCard
-              bgImgLink="/lib/images/foodrs10.avif"
-              heading="Food @ Rs.10"
-              subheading="We addresses hunger by providing affordable food at Rs. 10, ensuring accessibility and sustenance for those in need."
-            />
-            <VolunteerCard
-              bgImgLink="/lib/images/freelegalaid.avif"
-              heading="Free Legal Aid"
-              subheading="We provide free legal aid to the underprivileged, ensuring access to justice and equality for all."
-            />
+
+            {/* slice the item which is currently showing , also show only 2 items at a time*/}
+            {data.filter((item: any) => item._id !== id).slice(eventsToShow-2, eventsToShow).map((item: any, index: number) => {
+                return (
+                  <Link href={`/events/${item._id}`} key={index}>
+                    <VolunteerCard
+                      key={index}
+                      bgImgLink={urlFor(item.mainImage).url()}
+                      heading={item.title}
+                      subheading={item.body[0].children[0].text}
+                    />
+                  </Link>
+                );
+              })}
           </div>
-          <div className="flex w-full justify-center">
-            <button
-              type="button"
-              className="inline-flex justify-around items-center space-x-2 text-sm border-2 font-bold rounded-lg px-6 py-3 leading-6 border-jse-primary-500 bg-white hover:text-white hover:bg-jse-primary-400 hover:border-jse-primary-300 focus:ring focus:ring-jse-primary-300 focus:ring-opacity-50 text-jse-primary-500 active:bg-jse-primary-400 active:border-jse-primary-300 hover-white"
-            >
-              Load more
-            </button>
-          </div>
+
+          {/* Load More Button */}
+          {eventsToShow && (
+            <div className="flex w-full justify-center">
+              <button
+                type="button"
+                onClick={handleLoadMore}
+                className="inline-flex justify-around items-center space-x-2 text-sm border-2 font-bold rounded-lg px-6 py-3 leading-6 border-jse-primary-500 bg-white hover:text-white hover:bg-jse-primary-400 hover:border-jse-primary-300 focus:ring focus:ring-jse-primary-300 focus:ring-opacity-50 text-jse-primary-500 active:bg-jse-primary-400 active:border-jse-primary-300 hover-white"
+              >
+                Load more
+              </button>
+            </div>
+          )}
+          {/* load more button */}
 
           {/* anonmyus feedback */}
           <div className="flex flex-col gap-5">
@@ -162,6 +242,8 @@ const Events = () => {
               </button>
             </div>
           </div>
+          {/* anonmyus feedback */}
+
 
           <CTA />
         </div>
@@ -169,5 +251,3 @@ const Events = () => {
     </>
   );
 }
-
-export default Events;

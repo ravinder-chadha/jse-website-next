@@ -6,6 +6,44 @@ import HeadingTitle from "@/components/common/HeadingTitle";
 import VissonMission from "@/components/common/VissonMission";
 import FlagBearer from "@/components/common/FlagBearer";
 import Story from "@/components/common/Story";
+
+const stories = [
+  {
+    title: "Our Journey started",
+    desc: "The idea of this NGO was given by: Late. Smt. Jolly Jhanji. She loved to help people all around her which encouraged her to go forward with the idea of this NGO. She passed away in a very small age of just 30 yrs but her works made her immortal among all of us, and this website is a project made in the memory of her great works.",
+    direction: "left",
+    date: "Dec 2018",
+  },
+  {
+    title: "Food site Project",
+    desc: "In this project, our site offers hygienic food at just Rs 10, consisting of 4 chapatis and dal sabji, ensuring sufficiency for an average person while minimizing food waste.",
+    direction: "right",
+    date: "Jan 2019",
+  },
+  {
+    title: "Free Legal Aid",
+    desc: "Under this project we have provided 'Free Legal Aid' to those who cannot afford the advocate's high fees. Also we give legal advices and legal consultancy to everyone.",
+    direction: "left",
+    date: "Nov 2019"
+  },
+  {
+    title: "Food Packets Distribution",
+    desc: "We made food packets available for the people who were unable to afford it during the phase of lock down. We distributed these food packets door to door to help senior citizens too.",
+    direction: "right",
+    date: "July 2020"
+  },
+  {
+    title: "Blood Dontaion and eye checkup camp",
+    desc: "We Organized a blood donation camp where many volunteers donated blood for the children suffering from 'Polycythemia'. Along with that we organized an 'Eye Check- up Camp' so that people who couldn't afford the Check-up fees can have a check-up for free.",
+    direction: "left",
+    date: "July 2020"
+  },
+  {
+    date: "Jan 2021",
+    title: "Sanskrit encouragement prize",
+    desc: "Recently on 22/01/2021, our NGO declared 3 prizes at Vidya Dham for students who perform well in Sanskrit, encouraging the traditional language. Also, we donated refreshments among students. A momento was given to each student with ethical rules for a lifetime. We donated 50 thousand for school infrastructure.",
+  },
+]
 const AboutUs = () => {
   return (
     <MainLayout headerTransition={false}>
@@ -31,7 +69,7 @@ const AboutUs = () => {
                 />
               </svg>
               <h3 className="font-serif md:text-xl text-lg md:w-3/4 w-full text-center py-4">
-              Promote equality and humanity because, in the eyes of God, all are one. 
+                Promote equality and humanity because, in the eyes of God, all are one.
               </h3>
               <svg
                 className="self-end"
@@ -59,17 +97,18 @@ const AboutUs = () => {
 
           <div className="relative w-3/5  py-5">
             {/* Vertical Guide */}
-            <div className="w-10 md:w-12 absolute top-10 left-0 md:bottom-32 bottom-20 flex flex-col justify-center lg:left-1/2 lg:-ml-6" aria-hidden="true">
+            <div className="w-10 md:w-12 absolute top-10 left-0 md:bottom-52 bottom-96 flex flex-col justify-center lg:left-1/2 lg:-ml-6" aria-hidden="true">
               <div className="mx-auto w-1 grow bg-red-400" />
             </div>
             {/* END Vertical Guide */}
 
             {/* Timeline */}
             <div className="flex flex-col relative gap-4 pl-10 md:pl-12 lg:pl-0">
-              <Story direction="left" />
-              <Story direction="right" />
-              <Story direction="left" />
-              <Story direction="right" />
+              {stories.map((item: any, index: number) => {
+                return (
+                  <Story title={item.title} desc={item.desc} date={item.date} direction={item.direction} key={index} />
+                )
+              })}
             </div>
             {/* END Timeline */}
           </div>
@@ -86,14 +125,14 @@ const AboutUs = () => {
                 name="Harsh Jhanji"
                 title="Chairman"
                 textSize="text-2xl"
-                src = "/lib/images/Chairman.jpg"
+                src="/lib/images/Chairman.jpg"
               />
             </div>
             <div className="grid gap-4 p-4 grid-cols-2 grid-rows-2 mx-auto">
-              <FlagBearer name="Vinish Mittu" title="Vice Chairman" src ="/lib/images/vice_chairman.png"/>
-              <FlagBearer name="Om Jhanji" title="Executive Director" src="/lib/images/person_icon.png"/>
-              <FlagBearer name="Ravinder Chadha" title="IT Head" src="/lib/images/it_head.jpg"/>
-              <FlagBearer name="Karan Chadha" title="Treasurer" src="/lib/images/treasurer.jpeg"/>
+              <FlagBearer name="Vinish Mittu" title="Vice Chairman" src="/lib/images/vice_chairman.png" />
+              <FlagBearer name="Om Jhanji" title="Executive Director" src="/lib/images/person_icon.png" />
+              <FlagBearer name="Ravinder Chadha" title="IT Head" src="/lib/images/it_head.jpg" />
+              <FlagBearer name="Karan Chadha" title="Treasurer" src="/lib/images/treasurer.jpeg" />
             </div>
           </div>
           <CTA />
