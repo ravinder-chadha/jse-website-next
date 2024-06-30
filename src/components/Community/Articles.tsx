@@ -1,13 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-
+import { PortableText } from "@portabletext/react";
 interface Props {
   imglink: string;
   heading: string;
-  articleText: string;
+  articleText: any;
+  id: string;
 }
 
-const SundayArticles = ({ imglink = "", heading, articleText }: Props) => {
+const SundayArticles = ({ imglink = "", heading, articleText, id }: Props) => {
   return (
     <div className="flex flex-row w-full items-start justify-start gap-4 md:my-8 my-6">
       <Link href="#" className="block relative group w-4/5  rounded-2xl">
@@ -25,7 +26,13 @@ const SundayArticles = ({ imglink = "", heading, articleText }: Props) => {
             />
           </svg>
         </div>
-        <Image src={imglink} alt="SomeNatureImage" className="rounded-2xl md:h-64 h-full w-full object-cover " width={1000} height={1000}></Image>
+        <Image
+          src={imglink}
+          alt="SomeNatureImage"
+          className="rounded-2xl md:h-64 h-full w-full object-cover "
+          width={100}
+          height={100}
+        ></Image>
       </Link>
 
       <div className="flex flex-col justify-start items-start w-full md:mx-16">
@@ -35,8 +42,9 @@ const SundayArticles = ({ imglink = "", heading, articleText }: Props) => {
         >
           {heading}
         </Link>
+
         <p className="line-clamp-4 text-neutral-300 font-light my-4">
-          {articleText}
+          <PortableText value={articleText} />
         </p>
         <div className="w-full my-2">
           <button
@@ -50,5 +58,4 @@ const SundayArticles = ({ imglink = "", heading, articleText }: Props) => {
     </div>
   );
 };
-
 export default SundayArticles;

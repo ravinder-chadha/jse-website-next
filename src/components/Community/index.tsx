@@ -3,10 +3,35 @@ import HeadingTitle from "../common/HeadingTitle";
 import Podcast from "./Podcast";
 import SubSectionHeader from "../common/SubSectionHeader";
 import SundayArticles from "./Articles";
-import articleText from "./articleText.json";
 import Link from "next/link";
+import { getArticles, getPodcastLinks } from "../../../api/api";
+import { useState, useEffect } from "react";
+import imageUrlBuilder from "@sanity/image-url";
+import { client } from "../../../config/sanity"
+
 
 export default function Community() {
+
+  const builder = imageUrlBuilder(client);
+  const urlFor = (source: any) => {
+
+    return builder.image(source);
+  }
+
+  const [data, setData] = useState<any>(null);
+
+  useEffect(() => {
+    getArticles()
+      .then((res) => {
+        console.log("articles data", res);
+        setData(res);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
+
+
   return (
     <>
       {/* Community Section */}
@@ -26,18 +51,25 @@ export default function Community() {
               <Podcast />
             </div>
             <div className=" flex items-center justify-center mb-8">
-            <Link href="/community">
-            <button
-              type='button'
-              className=' border font-semibold rounded-lg py-2 leading-6 px-4 hover:border-jse-primary-500 text-white hover:bg-jse-primary-500'>
-              Explore More
-            </button>
-            </Link>
+              <Link href="/community">
+                <button
+                  type='button'
+                  className=' border font-semibold rounded-lg py-2 leading-6 px-4 hover:border-jse-primary-500 text-white hover:bg-jse-primary-500'>
+                  Explore More
+                </button>
+              </Link>
             </div>
             <SubSectionHeader title="Sunday Articles" />
             <div className="flex flex-col gap-4 ">
-              <Link href="/community/article"> <SundayArticles imglink={articleText.article1.img} heading={articleText.article1.title} articleText={articleText.article1.content} /></Link>
-              <Link href="/community/article"><SundayArticles imglink={articleText.article2.img} heading={articleText.article2.title} articleText={articleText.article2.content} /></Link>
+              {
+               data && data.map((article: any) => {
+                  return (
+                    <Link href={`/community/article`} key={article._id}>
+                        <SundayArticles imglink={urlFor(article.mainImage).url() as string} heading={article.title} articleText={article.body} id={article._id} />
+                    </Link>
+                  )
+                })
+              }
             </div>
           </div>
         </div>

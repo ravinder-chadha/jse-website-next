@@ -15,7 +15,7 @@ interface Values {
 
 type Display = {
   showPopup: boolean;
-  setShowPopup: React.Dispatch<React.SetStateAction<boolean>>; // Assuming you're using React state hooks
+  setShowPopup: React.Dispatch<React.SetStateAction<boolean>>; 
 };
 
 const volunteerFormSchema = Yup.object().shape({
@@ -68,7 +68,7 @@ const VolunteerForm = ({ showPopup, setShowPopup }: Display) => {
             values: Values,
             { setSubmitting }: FormikHelpers<Values>
           ) => {
-            console.log(values);
+            // console.log(values);
             setSubmitting(false);
           }}
         >
