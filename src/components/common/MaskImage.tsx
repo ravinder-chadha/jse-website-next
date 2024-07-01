@@ -25,8 +25,7 @@
 // }
 
 // export default MaskImage
-// //mobile :100vh - 290px
-// //desktop:100vh-152px
+
 
 
 import React, { useEffect, useState } from 'react';
@@ -47,9 +46,14 @@ const MaskImage = ({ source, className }: HeadingTitleProps) => {
   // Function to compute the height based on screen size
   const getHeight = () => {
     if (typeof window !== 'undefined') {
-
-      // web screen
-      setHeight('calc(100vh - 152px)');
+      // //mobile :100vh - 290px
+      // //desktop:100vh-152px
+      // setHeight('calc(100vh - 152px)');
+      if (window.innerWidth < 768) {
+        setHeight('calc(100vh - 208px)');
+      } else {
+        setHeight('calc(100vh - 152px)');
+      }
 
     }
   };

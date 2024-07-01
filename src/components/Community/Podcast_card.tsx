@@ -46,26 +46,24 @@ const Podcast_card = ({ heading, id, audioLink }: Props) => {
   return (
     <>
       <div
-        className={`bg-jse-neutral-900 md:w-64 w-full h-72 overflow-hidden rounded-2xl p-7 flex flex-col justify-around gap-8 items-center cursor-pointer md:my-8 my-4  ${isHovered ? 'bg-jse-primary-500' : ''
+        className={`bg-jse-neutral-900 shrink-0 w-56 h-full overflow-hidden rounded-2xl  flex flex-col justify-around  items-center cursor-pointer md:my-8 my-4  ${isHovered ? 'bg-jse-primary-500' : ''
           }`}
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
         onClick={setPlayerDisplay}
       >
-        <div className='w-88 rounded-lg h-88 overflow-hidden'>
           <Image
-            src="/logo-white.png"
+            src="/hero.jpg"
             alt="volunteer-card"
-            className=" object-fill rounded-lg"
+            className=" object-cover  w-88 h-88 rounded-t-lg"
             width={300}
             height={300}
             style={{ objectFit: 'cover' }}
           />
-        </div>
 
-        <div className="flex flex-row justify-between w-full items-center text-jse-neutral-300 ">
+        <div className="flex flex-row justify-between w-full p-4 items-center text-jse-neutral-300 ">
           <div className='flex flex-col'>
-            <h1 className="text-base font-semibold">{ truncateHeading(heading, 3)}</h1>
+            <h1 className="text-sm font-semibold mb-2 mr-3">{ truncateHeading(heading, 4)}</h1>
             <p className="text-xs font-light">29 mins</p>
           </div>
           <svg

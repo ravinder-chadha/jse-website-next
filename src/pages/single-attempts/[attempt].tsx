@@ -6,11 +6,24 @@ import FlagBearer from "@/components/common/FlagBearer";
 import HeadingTitle from "@/components/common/HeadingTitle";
 import MainLayout from "@/layout/MainLayout";
 import Image from "next/image";
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import { getStats } from "../../../api/api";
 type Props = {};
 
 const SingleAttempt = ({ }: Props) => {
+  const [statsData, setStatsData] = useState<any>(null);
+
+  useEffect(() => {
+    getStats()
+      .then((res) => {
+        console.log("events---->", res);
+        setStatsData(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  },[]);
+
   return (
     <MainLayout headerTransition={false}>
       <>
@@ -21,16 +34,27 @@ const SingleAttempt = ({ }: Props) => {
             SubTitle="82,000 children benefitted"
             Description="Jolly&apos;s Soothing Era, our dedicated NGO, is committed to making a positive impact on the lives of underprivileged children through quality education. We actively support these youngsters by donating old books, providing essential funding, and facilitating their educational journey. Our initiative extends beyond mere assistance, as we ensure access to new books and cover school fees, fostering an environment where learning is not limited by financial constraints. Operating across multiple schools, our efforts aim to maximize the reach of our assistance, empowering a greater number of children to break the cycle of poverty through education."
           />
-          <Stats title1="50" title2="82k+" title3="100" subtitle1="volunteers" subtitle2="Children Benefitted" subtitle3="Donaters" />
+          {statsData && statsData.length > 0 ? (
+            <Stats 
+              title1={statsData[0]?.volunteerCount} 
+              title2={statsData[0]?.childrenBenifitedCount} 
+              title3={statsData[0]?.donatorsCount} 
+              subtitle1="volunteers" 
+              subtitle2="Children Benefitted" 
+              subtitle3="Donaters" 
+            />
+          ) : (
+            <div>Loading stats...</div>
+          )}
           <HeadingTitle
             title="Prominent Contributors"
             className="mx-auto text-center font-black"
           />
           <div className="grid md:grid-cols-4 grid-cols-2 md:gap-10 gap-5">
             <FlagBearer name="Harsh Jhanji " title="Chairman" src="/lib/images/Chairman.jpg" />
-            <FlagBearer name="Vinish Mittu" title="Vice Chairman" src ="/lib/images/vice_chairman.png"/>
-            <FlagBearer name="Om Jhanji" title="Executive Director" src="/lib/images/person_icon.png"/>
-            <FlagBearer name="Ravinder Chadha" title="IT Head" src="/lib/images/it_head.jpg"/>
+            <FlagBearer name="Vinish Mittu" title="Vice Chairman" src="/lib/images/vice_chairman.png" />
+            <FlagBearer name="Om Jhanji" title="Executive Director" src="/lib/images/person_icon.png" />
+            <FlagBearer name="Ravinder Chadha" title="IT Head" src="/lib/images/it_head.jpg" />
           </div>
           <HeadingTitle
             title="Gallery"

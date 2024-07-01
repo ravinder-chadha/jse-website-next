@@ -13,3 +13,30 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+/* //scrollbar styling  rounded red color white bg */
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #dc4242;
+}
+/* same style in horizontal scroll bar */
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #dc4242;
+
+}
+
+
+::-webkit-scrollbar:horizontal {
+  width: 12px;
+  height: 12px;
+  background: #434b4b;
+}
+
