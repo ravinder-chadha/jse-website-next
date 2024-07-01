@@ -93,3 +93,19 @@ export const getContributors  = async () => {
       });
   });
 }
+
+export const getStats = async () => {
+  const query = groq`
+        *[_type=="stats"]
+        `;
+  return new Promise((resolve, reject) => {
+    client
+      .fetch(query)
+      .then((data) => {
+        resolve(data);
+      })
+      .catch((e) => {
+        reject(e);
+      });
+  });
+}

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import HeadingTitle from '../common/HeadingTitle';
-import database from "../../../firebaseConfig"
-import { collection, addDoc } from "firebase/firestore"
-
+import database from "../../../firebaseConfig";
+import { collection, addDoc } from "firebase/firestore";
+import toast, { Toaster } from "react-hot-toast";
 
 interface FormData {
   name: string;
@@ -38,18 +38,7 @@ const Formikform = () => {
     city: '',
     country: '',
     paymentMode: '',
-  } as {
-    name: string;
-    phoneno: string;
-    phonecode: string;
-    email: string;
-    purpose: string;
-    street: string;
-    city: string;
-    country: string;
-    paymentMode: string;
   });
-
 
   const [errors, setErrors] = useState<FormErrors>({});
 
@@ -64,7 +53,6 @@ const Formikform = () => {
       [name]: '', // Clear the error when the user starts typing
     }));
   };
-
 
   const validateForm = () => {
     const newErrors: FormErrors = {};
@@ -85,11 +73,12 @@ const Formikform = () => {
     e.preventDefault();
 
     if (!validateForm()) {
+      toast.error("Please fill in all required fields.");
       return;
     }
 
     try {
-      const docRef = await addDoc(collection(database, 'entries'), formData);
+      await addDoc(collection(database, 'entries'), formData);
 
       setFormData({
         name: '',
@@ -103,9 +92,10 @@ const Formikform = () => {
         email: '',
       });
 
-      console.log('Form submitted successfully!');
+      toast.success("Form submitted successfully!");
     } catch (error) {
       console.error('Error submitting form:', error);
+      toast.error("Error submitting form. Please try again later.");
     }
   };
 
@@ -116,7 +106,7 @@ const Formikform = () => {
         subtitle="We accept donations via UPI, Bank transfer, DD, and Cheque."
         className="mx-auto text-center"
       />
-      <form onSubmit={handleSubmit} className='flex flex-col items-center justify-centers gap-10'>
+      <form onSubmit={handleSubmit} className="flex flex-col items-center justify-centers gap-10">
         <div className="flex md:flex-row flex-col md:gap-8 items-center w-3/4 justify-center gap-4">
           <div className="flex flex-col w-full gap-3">
             <label htmlFor="name">Name</label>
@@ -127,7 +117,7 @@ const Formikform = () => {
               onChange={handleChange}
               value={formData.name}
               placeholder="John Doe"
-              className={`border border-gray-400 rounded-lg px-3 py-2 `}
+              className="border border-gray-400 rounded-lg px-3 py-2"
             />
 
             <label htmlFor="phonecode">Phone No</label>
@@ -138,7 +128,7 @@ const Formikform = () => {
                 onChange={handleChange}
                 value={formData.phonecode}
                 style={{ width: "80px" }}
-                className={`border inline border-gray-400 rounded-lg py-2 mr-4 `}
+                className="border inline border-gray-400 rounded-lg py-2 mr-4"
               >
                 <option value="+91">+91</option>
               </select>
@@ -148,7 +138,7 @@ const Formikform = () => {
                 onChange={handleChange}
                 value={formData.phoneno}
                 placeholder="123-456-7890"
-                className={`border w-full border-gray-400 inline rounded-lg px-3 py-2 `}
+                className="border w-full border-gray-400 inline rounded-lg px-3 py-2"
               />
             </div>
 
@@ -160,7 +150,7 @@ const Formikform = () => {
               value={formData.email}
               placeholder="john@gmail.com"
               type="email"
-              className={`border border-gray-400 rounded-lg px-3 py-2 `}
+              className="border border-gray-400 rounded-lg px-3 py-2"
             />
 
             <label htmlFor="purpose">Purpose Of donation*</label>
@@ -183,7 +173,7 @@ const Formikform = () => {
             {errors.purpose && <p className="text-red-500">{errors.purpose}</p>}
           </div>
 
-          <div className="flex flex-col  w-full gap-3">
+          <div className="flex flex-col w-full gap-3">
             <label htmlFor="street">Address</label>
             <input
               id="street"
@@ -192,7 +182,7 @@ const Formikform = () => {
               onChange={handleChange}
               name="street"
               placeholder="street"
-              className={`border border-gray-400 rounded-lg px-3 py-2 `}
+              className="border border-gray-400 rounded-lg px-3 py-2"
             />
 
             <label htmlFor="city">City</label>
@@ -203,7 +193,7 @@ const Formikform = () => {
               name="city"
               placeholder="city"
               type="text"
-              className={`border border-gray-400 inline rounded-lg px-3 py-2 `}
+              className="border border-gray-400 inline rounded-lg px-3 py-2"
             />
 
             <label htmlFor="country">Country</label>
@@ -214,7 +204,7 @@ const Formikform = () => {
               onChange={handleChange}
               placeholder="India"
               type="text"
-              className={`border border-gray-400 rounded-lg px-3 py-2 `}
+              className="border border-gray-400 rounded-lg px-3 py-2"
             />
 
             <label htmlFor="paymentMode">Method Of donation*</label>
@@ -241,6 +231,7 @@ const Formikform = () => {
           Submit
         </button>
       </form>
+      <Toaster />
     </div>
   );
 };

@@ -52,7 +52,7 @@ export default function YoutubeVideos() {
             />
             <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-10">
               {data &&
-                data.slice(0, isMobile ? 2 : 4).map((item: any, index: any) => {
+                data.slice(0, isMobile ? 3 : 4).map((item: any, index: any) => {
                   return (
                     <div key={index}>
                       <iframe

@@ -74,7 +74,7 @@ const Community = () => {
           <HeadingTitle title="Join the Soothing Community" className="text-white text-center mx-auto " subtitle="Checkout what’s on offer in our community" />
           <div className="md:my-16 my-0 w-full">
             <SubSectionHeader title="Weekly Podcasts" />
-            <div className="flex flex-col overflow-x-scroll justify-start md:gap-8 gap-4 items-center w-full md:flex-row my-4">
+            <div className="flex flex-col overflow-x-scroll shrink-0 justify-start md:gap-6 gap-4 items-center w-full md:flex-row my-4">
               {podcastData && podcastData.map((item: any, index: number) => {
                 return (
                   <Podcast_card
@@ -89,7 +89,7 @@ const Community = () => {
             </div>
 
             <SubSectionHeader title="New Podcasts" />
-            <div className="flex flex-col justify-start md:gap-8 gap-4 items-center w-full md:flex-row my-4">
+            <div className="flex flex-col overflow-x-scroll shrink-0 justify-start md:gap-8 gap-4 items-center w-full md:flex-row my-4">
               {podcastData && podcastData.map((item: any, index: number) => {
                 return (
                   <Podcast_card

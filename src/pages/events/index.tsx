@@ -15,6 +15,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import { getEvents } from "./../../../api/api";
 import { useEffect } from "react";
 import { client } from "./../../../config/sanity";
+import FeedbackForm from "./feedback-form";
 
 
 
@@ -189,35 +190,7 @@ const Events = () => {
           </div>
 
           {/* anonmyus feedback */}
-          <div className="flex flex-col gap-5">
-            <HeadingTitle title="Anonymous Feedback" subtitle="Fueling Improvement and Growth" className="font-black text-center mx-auto" />
-            <div className="mx-auto text-center">
-              <label htmlFor="feedback">Share Your Thoughts, suggestions, or ideas Anonymously</label>
-              <textarea
-                id="feedback"
-                className="border md:w-11/12 w-full mt-2 border-gray-400 rounded-lg px-3 py-2"
-                placeholder="Write your feedback here"
-                rows={4}  // You can specify the number of rows you want to display
-              ></textarea>
-              <button
-                type="button"
-                className="inline-flex justify-around items-center space-x-2 text-sm border-2 font-bold rounded-lg px-6 py-3 leading-6 border-jse-primary-500 bg-white hover:text-white hover:bg-jse-primary-400 hover:border-jse-primary-300 focus:ring focus:ring-jse-primary-300 focus:ring-opacity-50 text-jse-primary-500 active:bg-jse-primary-400 active:border-jse-primary-300 hover-white"
-                onClick={() => {
-                  // the text in the textarea is already empty then alert the user to write something
-                  if ((document.getElementById("feedback") as HTMLInputElement).value == "") {
-                    alert("Please write something before submitting");
-                    return;
-                  }
-                  // erase the text in the textarea
-                  (document.getElementById("feedback") as HTMLInputElement).value = "";
-                  // when the user submits the feedback then alert the user that the feedback has been submitted
-                  alert("Your feedback has been submitted");
-                }}
-              >
-                Submit
-              </button>
-            </div>
-          </div>
+          <FeedbackForm />
 
           <CTA />
         </div>
